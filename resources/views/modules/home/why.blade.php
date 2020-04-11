@@ -4,13 +4,16 @@
     <div class="row mb-3">
       <div class="col-lg-5 text-center text-lg-left mb-3 mb-lg-0">
         <h2 class="text-uppercase fs-lg-3.5x mb-3 mb-lg-5">Why UVC?</h2>
+        @if ($image = $section['image'])
+          <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="d-lg-none w-100"/>
+        @endif
         <p class="fs-1.25x mb-3 mb-lg-5">
           {!! $section['text'] !!}
         </p>
         <a href="/blog" class="btn btn-outline-primary">Learn More</a>
       </div>
       @if ($image = $section['image'])
-        <div class="col-lg-7">
+        <div class="d-none d-lg-block col-lg-7">
           <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-100"/>
         </div>
       @endif
