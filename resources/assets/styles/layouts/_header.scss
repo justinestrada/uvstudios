@@ -1,0 +1,91 @@
+body {
+  padding-top: 112px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+  }
+}
+
+#header {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  z-index: 16;
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    top: 0;
+    width: initial;
+  }
+
+  .logo {
+    height: 40px;
+
+    @include media-breakpoint-up(lg) {
+      height: 56px;
+    }
+  }
+
+  .site-name {
+    font-size: 1.25rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+  }
+
+  .cart-count {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background: $black;
+    border-radius: 100%;
+    color: $white;
+    font-size: 0.5rem;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .btn-circle {
+    height: 40px;
+    width: 40px;
+    color: $black;
+    background-color: transparent;
+    border-color: $black;
+
+    .btn-img-hover {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $black;
+      color: $white;
+
+      .btn-img-default {
+        display: none;
+      }
+
+      .btn-img-hover {
+        display: block;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 56px;
+      width: 56px;
+    }
+
+    img {
+      height: 16px;
+      width: 16px;
+
+      @include media-breakpoint-up(lg) {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}

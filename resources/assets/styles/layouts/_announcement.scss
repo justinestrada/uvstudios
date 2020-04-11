@@ -1,0 +1,27 @@
+
+#announcement {
+  position: fixed;
+  top: 0;
+  background-color: $black;
+  z-index: 11;
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    width: initial;
+  }
+
+  p {
+    // padding-right: 30px;
+    margin-bottom: 0;
+  }
+
+  // .btn-close {
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0;
+  //   padding: 0 15px;
+  //   font-size: 1rem;
+  //   height: 24px;
+  //   border: none;
+  // }
+}

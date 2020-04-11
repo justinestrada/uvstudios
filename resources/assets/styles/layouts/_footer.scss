@@ -1,0 +1,16 @@
+
+#footer .menu-item {
+  margin-bottom: 0.5rem;
+
+  a {
+    color: #070707;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+#footer .footer-link {
+  color: #070707;
+}

@@ -1,0 +1,38 @@
+#page-hero {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: calc(100vh - 112px);
+
+  @include media-breakpoint-up(lg) {
+    height: calc(100vh - 128px);
+  }
+
+  .title {
+    font-size: 3rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 5rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  #hero-arrow-down {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}

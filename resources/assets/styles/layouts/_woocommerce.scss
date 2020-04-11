@@ -1,0 +1,49 @@
+
+.woocommerce-message {
+  border-top-color: $green;
+  border-radius: 0.25rem;
+
+  @extend .bg-white;
+  @extend .z-depth-1;
+
+  a.button {
+    @extend .btn;
+    @extend .btn-black;
+    @extend .btn-rounded;
+  }
+
+  &::before {
+    color: $green;
+  }
+}
+
+.woocommerce-breadcrumb {
+  font-size: 1rem !important;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  margin-bottom: 0 !important;
+  text-transform: uppercase !important;
+
+  @extend .container;
+  @extend .container-big;
+  @extend .text-black;
+  @extend .font-weight-bold;
+
+  a {
+    margin-right: 0.25rem !important;
+
+    @extend .text-dark-gray;
+  }
+}
+
+.woocommerce button.button {
+  @extend .btn;
+  @extend .btn-primary;
+}
+
+.woocommerce #respond input#submit {
+  @extend .btn;
+  @extend .btn-primary;
+}

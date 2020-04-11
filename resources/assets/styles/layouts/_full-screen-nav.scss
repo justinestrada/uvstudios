@@ -1,0 +1,65 @@
+
+#fullScreenModal {
+  .modal-content {
+    background-color: transparent;
+    border: none;
+
+    .modal-body {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 0;
+
+      .nav li {
+        display: block;
+        width: 100%;
+
+        a {
+          display: block;
+          padding: 1rem;
+          text-transform: uppercase;
+          transition: 300ms ease-out;
+          font-weight: 700 !important;
+          color: $white;
+
+          @include media-breakpoint-up(lg) {
+            font-size: 1.25rem !important;
+          }
+
+          @include media-breakpoint-up(xl) {
+            font-size: 1.5rem !important;
+          }
+
+          .cart-count {
+            background: $white;
+            color: $black;
+            padding: 0.25rem;
+            height: 32px;
+            width: 32px;
+            display: inline-block;
+            line-height: 24px;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: 1rem;
+          }
+        }
+
+        &.sweep-to-right::before {
+          background: rgba(193, 76, 215, 0.75);
+        }
+      }
+    }
+  }
+
+  .btn-close-full-screen-menu {
+    position: absolute;
+    top: 2.75rem;
+    right: 1rem;
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
+    padding: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

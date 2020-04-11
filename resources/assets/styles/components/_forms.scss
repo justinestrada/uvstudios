@@ -1,0 +1,93 @@
+
+
+.input-group {
+  .input-group-text {
+    height: 64px;
+    border-top-left-radius: 70px;
+    border-bottom-left-radius: 70px;
+    background: transparent;
+    border: 2px solid $black;
+    border-right: none;
+  }
+
+  .form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 64px;
+    height: 64px;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+    border: 2px solid $black;
+    border-left: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.custom-control {
+  display: block;
+  padding: 0.75rem 1.25rem 0.75rem 2rem;
+  margin: 0;
+
+  &.custom-checkbox {
+    cursor: pointer;
+
+    .custom-control-input:checked ~ .custom-control-indicator::before {
+      content: "✓";
+      font-size: 1rem;
+      height: 24px;
+      width: 24px;
+      display: block;
+      text-align: center;
+      // background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgI…c3NywwLTEuMDcxTDIxLjY1MiwzLjIxMXoiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+    }
+
+    .custom-control-indicator {
+      top: 12px;
+      left: 0;
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-color: $white;
+      border: 2px solid $black !important;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 75%;
+    }
+  }
+
+  &.custom-control-description {
+    font-size: 14px;
+  }
+}
+
+/*
+ * Ninja Forms
+ */
+
+.nf-form-content {
+  max-width: initial !important;
+
+  [type="button"] {
+    @extend .btn;
+    @extend .btn-black;
+    @extend .btn-rounded;
+  }
+}
+
+.woocommerce form .form-row {
+  @extend .form-group;
+}
+
+.woocommerce form .form-row .input-text,
+.woocommerce-page form .form-row .input-text {
+  @extend .form-control;
+}

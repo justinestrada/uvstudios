@@ -1,0 +1,18 @@
+
+#accordion {
+  .card-header {
+    background-color: $white;
+
+    [aria-expanded="true"] {
+      border-bottom: none;
+    }
+
+    .btn img {
+      transition: all 0.35s;
+    }
+
+    .btn[aria-expanded="true"] img {
+      transform: rotate(180deg);
+    }
+  }
+}

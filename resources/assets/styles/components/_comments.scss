@@ -1,0 +1,67 @@
+
+.comment-list {
+  @extend .list-unstyled;
+
+  li {
+    list-style: none;
+    margin-bottom: 1rem;
+
+    .comment-body {
+      background: $lightest-gray;
+      padding: 1rem;
+      border: 1px solid $gray;
+      border-radius: 0.25rem;
+    }
+
+    .avatar {
+      border-radius: 0.25rem;
+    }
+
+    .says {
+      display: none;
+    }
+
+    .reply .comment-reply-link {
+      @extend .btn;
+      @extend .btn-outline-black;
+    }
+
+    .comment-metadata,
+    .comment-content,
+    .reply {
+      padding-left: 3rem;
+    }
+  }
+
+  .children li {
+    margin-top: 1rem;
+
+    .comment-body {
+      padding-left: 1rem;
+      border-left: 0.25rem solid $dark-gray;
+    }
+
+    .fn {
+      padding-left: 1rem;
+    }
+  }
+}
+
+.comment-form {
+  p {
+    @extend .form-group;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  textarea {
+    @extend .form-control;
+  }
+
+  input[type="submit"] {
+    @extend .btn;
+    @extend .btn-secondary;
+  }
+}
+

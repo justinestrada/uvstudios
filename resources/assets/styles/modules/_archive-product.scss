@@ -1,0 +1,24 @@
+
+.product-card {
+  .view {
+    height: 256px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+
+    .mask {
+      display: none !important;
+    }
+
+    &:hover .mask {
+      display: flex !important;
+    }
+  }
+
+  .amount {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+}

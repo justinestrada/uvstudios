@@ -1,0 +1,18 @@
+
+.template-about {
+  #our-story {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+}

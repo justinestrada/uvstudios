@@ -1,0 +1,19 @@
+
+#newsletterModal {
+  [data-dismiss="modal"] {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  img {
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+  }
+
+  .form-group .form-control {
+    height: 56px;
+    border-radius: 70px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,48 @@
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.spin-infinite {
+  animation: rotation 1.5s infinite linear;
+}
+
+.hover-spin {
+  transition: transform 0.8s ease-in-out;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.sweep-to-right {
+  position: relative;
+  transform: translateZ(0);
+  transition: color 1000ms;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #070707;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    /* stylelint-disable declaration-block-no-shorthand-property-overrides */
+    transition-property: transform;
+    transition: 300ms ease-out;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}

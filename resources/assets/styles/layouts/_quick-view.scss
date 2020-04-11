@@ -1,0 +1,18 @@
+
+#quickViewModal {
+  .close[type="button"] {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1;
+  }
+
+  .amount {
+    font-weight: bold;
+    font-size: 1.75rem;
+  }
+
+  .added_to_cart {
+    display: none;
+  }
+}

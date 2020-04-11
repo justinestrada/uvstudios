@@ -1,0 +1,101 @@
+
+/*
+ * Futura PT Heavy
+*/
+
+.ff-futura-heavy {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*
+ * Futura PT Heavy Oblique
+*/
+
+.ff-futura-heavy-oblique {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/*
+ * Futura PT Book
+*/
+
+.ff-futura-book {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*
+ * Futura PT Book Oblique
+*/
+
+.ff-futura-book-oblique {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*
+ * Futura PT Bold
+*/
+
+.ff-futura-bold {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*
+ * Futura PT Bold Oblique
+*/
+
+.ff-futura-bold-oblique {
+  font-family: "futura-pt-bold", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @extend .ff-futura-bold;
+}
+
+body,
+p,
+span {
+  @extend .ff-futura-book;
+}
+
+b,
+strong {
+  font-weight: 700 !important;
+}
+
+.fs-1\.25x {
+  font-size: 1.25rem;
+}
+
+@include media-breakpoint-up(lg) {
+  .fs-lg-3\.5x {
+    font-size: 3.5rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 2.5rem;
+}

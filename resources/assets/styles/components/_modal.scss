@@ -1,0 +1,14 @@
+
+.modal-open {
+  overflow: initial;
+}
+
+.modal-full-screen {
+  margin: 0;
+  height: 100vh;
+  max-width: initial;
+
+  .modal-body {
+    padding: 0;
+  }
+}

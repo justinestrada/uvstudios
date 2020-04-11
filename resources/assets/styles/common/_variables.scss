@@ -1,0 +1,33 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #bd34dc,
+  secondary: #070707,
+  pink: #bd34dc,
+  yellow: #ffde59,
+  orange: #ff9800,
+  true-black: #000,
+  black: #070707,
+  white: #fff,
+  dark-gray: #666,
+  gray: #ddd,
+  light-gray: #f8f8f8,
+  lightest-gray: #f1f1f1,
+);
+
+$primary: #bd34dc;
+$secondary: #070707;
+$pink: #bd34dc;
+$yellow: #ffde59;
+$orange: #ff9800;
+$true-black: #000;
+$black: #070707;
+$white: #fff;
+$dark-gray: #666;
+$gray: #ddd;
+$light-gray: #f1f1f1;
+$lightest-gray: #f1f1f1;
+// #4CAF50
+$green: #007e32;
+$light-green: #2eaa64;

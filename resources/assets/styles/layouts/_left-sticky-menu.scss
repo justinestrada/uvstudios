@@ -1,0 +1,58 @@
+
+#left-sticky-menu {
+  display: none;
+  margin-left: -80px;
+  transition: 1s all;
+  opacity: 0.9;
+  position: fixed;
+  top: 35%;
+  left: 0;
+  z-index: 9999;
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+
+  &.active {
+    margin-left: 0;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .btn-toggle-full-screen-menu {
+    position: absolute;
+    top: 43%;
+    left: 0;
+
+    .menu-bars {
+      display: block;
+    }
+
+    .close {
+      display: none;
+    }
+
+    .menu-bars,
+    .close {
+      position: relative;
+      top: -4px;
+      height: 24px;
+    }
+
+    &.toggled {
+      .menu-bars {
+        display: none;
+      }
+
+      .close {
+        display: block;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
