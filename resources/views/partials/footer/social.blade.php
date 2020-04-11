@@ -1,4 +1,4 @@
-<section id="social" class="py-5">
+<section id="social" class="bg-light-gray py-5">
   <div class="container">
     <div class="row mb-3">
       <div class="col text-center">

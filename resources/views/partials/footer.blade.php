@@ -2,7 +2,7 @@
 @php
 $site_url = get_site_url();
 @endphp
-{{-- @include('partials.footer.contact') --}}
+@include('partials.footer.social')
 <footer id="footer" class="py-5">
   <div class="container">
     <div class="row mb-3">

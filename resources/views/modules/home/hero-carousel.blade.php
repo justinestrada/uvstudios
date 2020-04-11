@@ -27,9 +27,9 @@ $hero = get_field('hero');
             <img src="{{ $slide['bg_img']['url'] }}" alt="{{ $slide['bg_img']['alt'] }}" class="w-100" style="visibility: hidden;" />
               <div class="carousel-caption">
                 <h2 class="text-uppercase text-lg-left fs-lg-3.5x">{!! $slide['title'] !!}</h2>
-                <div class="text-lg-right">
+                <div class="text-lg-left">
                   <h4 class="text-white fs-lg-3.5x mb-5">{!! $slide['sub_title'] !!}</h4>
-                  <a href="{{ $slide['link'] }}" class="btn btn-white btn-rounded" title="Shop Now" >Shop Now</a>
+                  <a href="{{ $slide['link'] }}" class="btn btn-primary btn-rounded" title="Shop Now" >Shop Now</a>
                 </div>
               </div>
           </div>

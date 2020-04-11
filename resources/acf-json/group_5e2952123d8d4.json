@@ -251,6 +251,126 @@
             ]
         },
         {
+            "key": "field_5e9230e8726e3",
+            "label": "Petri Dish",
+            "name": "petri_dish",
+            "type": "group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e9231c4e4ef8",
+                    "label": "Before & After Image",
+                    "name": "before_after_img",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5e9230e8726e4",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Your phone, wallet, keys and keyboards are 18x dirtier and contains more harmful bacteria than a public toilet. Washing our everyday items with soap and water is not realistic nor is it safe for our devices. But now with the Chloe's Far-UVC Light you can Disinfect these everyday surfaces. Not only is it more convenient than soap, but its eco-freindly and safe on all devices, your skin and eyes!",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5e922cb86f421",
+            "label": "Text & Background Image",
+            "name": "text_background_image",
+            "type": "group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e922d276f423",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Chloe uses 275nm a type of ultraviolet light called Far-UVC <br class=\"d-none d-xl-block\">safe for skin and eyes but lethal to bacteria and viruses.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5e922d186f422",
+                    "label": "Background Image",
+                    "name": "bg_img",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
             "key": "field_5e32937418d92",
             "label": "Featured Products",
             "name": "products",
@@ -656,5 +776,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586627452
+    "modified": 1586639449
 }
