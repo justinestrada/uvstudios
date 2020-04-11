@@ -1,9 +1,23 @@
 
+
 @if ($section = get_field('why'))
+<style>
+@media (min-width: 992px) {
+#why .why-img {
+  max-width: 560px;
+  margin-top: -5rem;
+  float: right;
+}
+}
+</style>
   <section id="why" class="container py-5">
+    <div class="row mb-3 mb-lg-5">
+      <div class="col text-center text-lg-left">
+        <h2 class="text-uppercase fs-3.5x mb-0">Why UVC?</h2>
+      </div>
+    </div>
     <div class="row mb-3">
-      <div class="col-lg-5 text-center text-lg-left mb-3 mb-lg-0">
-        <h2 class="text-uppercase fs-lg-3.5x mb-3 mb-lg-5">Why UVC?</h2>
+      <div class="col-lg-5 col-xl-3 text-center text-lg-left mb-3 mb-lg-0">
         @if ($image = $section['image'])
           <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="d-lg-none w-100"/>
         @endif
@@ -13,8 +27,8 @@
         <a href="/blog" class="btn btn-outline-primary">Learn More</a>
       </div>
       @if ($image = $section['image'])
-        <div class="d-none d-lg-block col-lg-7">
-          <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="w-100"/>
+        <div class="d-none d-lg-block col-lg-7 col-xl-8 offset-xl-1">
+          <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="why-img w-100"/>
         </div>
       @endif
     </div>

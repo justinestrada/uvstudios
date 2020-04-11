@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col text-center">
-          <h2 class="fs-lg-3.5x mb-0">What They're Saying</h2>
+          <h2 class="fs-3.5x mb-0">What They're Saying</h2>
         </div>
       </div>
       <div id="carouselReviewsIndicators" class="carousel slide" data-ride="carousel">

@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
     @include('partials.page.breadcrumb', ['bg_color' => 'white'])
   @endif
   <section id="shop" class="bg-lightest-gray py-5" >
-    <div class="container container-big">
+    <div class="container">
       <div class="row">
         <div class="col">
           @php
