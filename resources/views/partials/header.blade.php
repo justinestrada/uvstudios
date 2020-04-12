@@ -13,14 +13,14 @@
               </a>
             </div>
           @endif
-          <div class="col col-lg-4 d-flex align-items-center justify-content-start justify-content-lg-center">
+          <div class="col-6 col-lg-4 d-flex align-items-center justify-content-start justify-content-lg-center pr-0">
             <a href="{{ home_url('/') }}" title="{{ bloginfo('name') }}" class="d-block text-black" >
               {{-- <img src="{{ App\asset_path('images/logo/uv.svg') }}" alt="{{ bloginfo('name') }}" class="logo d-lg-none" /> --}}
               <img src="{{ App\asset_path('images/logo/uv-studios.svg') }}" alt="{{ bloginfo('name') }}" class="logo" />
               <h1 class="site-name d-none">{{ bloginfo('name') }}</h1>
             </a>
           </div>
-          <div class="col-auto col-lg-4 text-right">
+          <div class="col-6 col-lg-4 text-right pl-0">
             <div class="d-inline-block position-relative mr-3">
               @if (is_user_logged_in())
                 <a href="{{ get_site_url() }}/my-account" class="btn btn-circle" title="My Account" >

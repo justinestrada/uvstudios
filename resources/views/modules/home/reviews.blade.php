@@ -2,12 +2,12 @@
 @if ($reviews = get_field('reviews'))
   <section id="reviews" class="bg-light-gray py-5" style="background-image: url('{{ App\asset_path('images/bg/chloe-top-left-2.png') }}')">
     <div class="container">
-      <div class="row mb-5">
-        <div class="col text-center">
+      <div class="row pt-5 mt-5 mb-5">
+        <div class="col pt-5 text-center">
           <h2 class="fs-3.5x mb-0">What They're Saying</h2>
         </div>
       </div>
-      <div id="carouselReviewsIndicators" class="carousel slide" data-ride="carousel">
+      <div id="carouselReviewsIndicators" class="carousel slide mb-5" data-ride="carousel">
         @if (count($reviews) > 1)
           <ol class="carousel-indicators">
             @foreach ($reviews as $key => $review)
