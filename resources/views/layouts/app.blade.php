@@ -2,6 +2,7 @@
 <html {!! get_language_attributes() !!}>
   @include('partials.head')
   <body @php body_class() @endphp>
+    {!! get_field('after_body_scripts', 'option') !!}
     @php do_action('get_header') @endphp
     @include('partials.header')
     <main class="main" role="document">
