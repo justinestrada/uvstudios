@@ -19,6 +19,44 @@
             "endpoint": 0
         },
         {
+            "key": "field_5e92c10b75fc7",
+            "label": "Header Scripts",
+            "name": "header_scripts",
+            "type": "textarea",
+            "instructions": "Code thats inserted  before the closing &lt;\/head&gt;",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e92c13275fc8",
+            "label": "After Body Scripts",
+            "name": "after_body_scripts",
+            "type": "textarea",
+            "instructions": "Code thats inserted after the opening &lt;body&gt;",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_5e4a0e8f277ce",
             "label": "Social",
             "name": "social",
@@ -342,5 +380,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586662280
+    "modified": 1586676134
 }
