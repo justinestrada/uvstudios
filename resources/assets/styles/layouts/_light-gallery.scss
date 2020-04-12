@@ -1,0 +1,53 @@
+
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+.lg-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.lg {
+  .lg-toolbar {
+    background-color: $black !important;
+
+    .lg-icon {
+      font: normal normal normal 14px/1 FontAwesome !important;
+
+      &::after {
+        display: block;
+        font-size: 1rem;
+        margin-top: 6px;
+      }
+    }
+
+    .lg-download {
+      display: none;
+
+      &::after {
+        content: "\f019";
+      }
+    }
+
+    .lg-close::after {
+      content: "\f00d";
+    }
+  }
+
+  .lg-actions {
+    .lg-icon {
+      background-color: $black !important;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: 1rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .lg-prev::after {
+      content: "\f104";
+    }
+
+    .lg-next::before {
+      content: "\f105";
+    }
+  }
+}

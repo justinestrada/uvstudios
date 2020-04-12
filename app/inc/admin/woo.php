@@ -41,3 +41,14 @@ add_action('woocommerce_after_single_product_summary', function () {
         remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
     }
 }, 1 );
+
+
+/*
+ * Gutenberg
+ */
+add_filter('use_block_editor_for_post_type', function ($can_edit, $post_type){
+	if($post_type == 'product'){
+		$can_edit = true;
+	}
+	return $can_edit;
+}, 10, 2);

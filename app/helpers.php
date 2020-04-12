@@ -202,7 +202,7 @@ function giftoflifecbd_my_addresses() {
                 <?php echo $address ? wp_kses_post( $address ) : esc_html_e( 'You have not set up this type of address yet.', 'woocommerce' ); ?>
                 </address>
                 <a href="javascript:void(0);" class="btn btn-outline-black btn-rounded btn-edit-address" title="Edit" data-address="<?php echo $name; ?>">Edit</a>
-                <?php giftoflifecbd_edit_address(); ?>
+                <?php uvstudios_edit_address(); ?>
             </div>
         <?php endforeach; ?>
     </div>
@@ -211,7 +211,7 @@ function giftoflifecbd_my_addresses() {
     <?php }
 }
 
-function giftoflifecbd_edit_address( $load_address = 'billing' ) { ?>
+function uvstudios_edit_address( $load_address = 'billing' ) { ?>
     <?php
     $load_address = $address;
     $country = get_user_meta( get_current_user_id(), $load_address . '_country', true );
@@ -243,4 +243,32 @@ function giftoflifecbd_edit_address( $load_address = 'billing' ) { ?>
         <input type="hidden" name="action" value="edit_address" />
     </form>
     <?php
+}
+
+if (! function_exists('social_shares')) {
+    function social_shares($social, $post)
+    {
+        $post_url = urlencode(get_permalink($post->ID));
+        $post_title = urlencode(str_replace(' ', '%20', $post->post_title));
+        $site_title = urlencode(str_replace(' ', '%20', get_bloginfo('name')));
+        switch ($social) {
+            case 'linkedin':
+                return 'https://www.linkedin.com/shareArticle?mini=true&url=' . $post_url . '&amp;title=' . $post_title;
+                break;
+            case 'twitter':
+                $twitter_url = get_field('social', 'option')['twitter'];
+                $twitter_handle = ($twitter_url) ? urlencode( str_replace('https://twitter.com/', '', $twitter_url) ) : false;
+                $twitter_url = 'https://twitter.com/intent/tweet?text=' . $post_title . '&amp;url=' . $post_url . '&amp;via=';
+                $twitter_url .= ($twitter_handle) ? $twitter_handle : $site_title;
+                return $twitter_url;
+                break;
+            case 'facebook':
+                return 'https://www.facebook.com/sharer/sharer.php?u='. $post_url;
+                break;
+            case 'email':
+                return 'mailto:example@email.com?subject=' . $post_title . '&body=' . $post_url;
+                break;
+        }
+
+    }
 }

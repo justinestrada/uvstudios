@@ -22,6 +22,7 @@
 @import "components/forms";
 @import "components/carousel";
 @import "components/modal";
+@import "components/toast";
 @import "components/wp-classes";
 @import "layouts/header";
 @import "layouts/footer";
@@ -42,9 +43,11 @@
 @import "layouts/woocommerce";
 @import "layouts/quick-view";
 @import "layouts/pagination";
+@import "layouts/light-gallery";
 @import "modules/splash";
-@import "modules/template-home";
-@import "modules/template-about";
-@import "modules/template-cart";
+@import "modules/home";
+@import "modules/about";
+@import "modules/cart";
 @import "modules/archive-product";
+@import "modules/single-product";
 

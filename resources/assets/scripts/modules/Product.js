@@ -4,21 +4,30 @@ export const Product = {
   onLoad: function() {
     if ( $('.single-product').length) {
       Smooth.onInit( $('.smooth-scroll') );
-      Product.onVariationsAttributeChange();
+      Product.initImageGallery();
+      Product.onInitAttributeLabel();
       Product.onChangeQuantity();
       Product.initReviewErrorNodes();
       Product.onSubmitReview();
     }
   },
-  onVariationsAttributeChange: function() {
-    $('.attribute-input').on('change', function() {
-      const input_name = $(this).attr('name');
-      const variation_id = $('input[name="' + input_name + '"]:checked').attr('variation_id');
-      const input_text = $('input[name="' + input_name + '"]:checked').parent().text();
-      $('.single-product .cart input[name="variation_id"]').val(variation_id);
-      const toggle = $(this).parent().parent().prev();
-      toggle.html(input_text);
-      $(this).parent().parent().css('min-width', toggle.width());
+  initImageGallery: function() {
+    $('#lightgallery').lightGallery();
+  },
+  onInitAttributeLabel: function() {
+    // init set selected Attribute Label
+    $('.variations select').each(function() {
+      const select_val = $(this).val();
+      $('label[value="' + select_val + '"]').addClass('selected');
+    });
+    // on Attribute Label Click
+    $('.attribute-label').on('click', function() {
+      $('.attribute-label').removeClass('selected');
+      $(this).addClass('selected');
+      const attribute_name = $(this).attr('for');
+      const value = $(this).attr('value');
+      const select = $('select[name="' + attribute_name + '"]');
+      select.val(value).trigger( 'change' );
     });
   },
   onChangeQuantity: function() {

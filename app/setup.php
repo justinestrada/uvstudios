@@ -13,11 +13,21 @@ use Roots\Sage\Template\BladeProvider;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('typekit', 'https://use.typekit.net/lwk8vxe.css', false, null);
     wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?ver=4.4', false, null);
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
 
+    if (is_product()) {
+        wp_enqueue_style('lightgallery', get_template_directory_uri() . '/assets/styles/lib/lightgallery.min.css', false, null);
+    }
+
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     // wp_enqueue_style('sage/main.css', 'https://giftoflifecbd.com/wp-content/themes/giftoflifecbd/dist/styles/main.css', false, null);
 
     wp_enqueue_script('recaptcha', 'https://www.google.com/recaptcha/api.js', [], null, true);
+
+    if (is_product()) {
+        wp_enqueue_script('lightgallery', get_template_directory_uri() . '/assets/scripts/lib/lightgallery.min.js', [], null, true);
+        wp_enqueue_script('lg-zoom', get_template_directory_uri() . '/assets/scripts/lib/lg-zoom.js', [], null, true);
+        // lg-thumbnail.min.js
+    }
 
     $THEME_VARS = array(
         'site_url' => get_site_url(),

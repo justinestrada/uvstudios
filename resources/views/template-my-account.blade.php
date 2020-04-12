@@ -63,8 +63,8 @@
           <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="pills-profile-tab">
             @php
             /*
-            App\giftoflifecbd_my_addresses()
-            App\giftoflifecbd_edit_address()
+            App\uvstudios_my_addresses()
+            App\uvstudios_edit_address()
             */
             @endphp
           </div>

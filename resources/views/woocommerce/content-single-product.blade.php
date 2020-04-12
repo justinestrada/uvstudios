@@ -1,4 +1,4 @@
-<?php
+@php
 /**
  * The template for displaying product content in the single-product.php template
  *
@@ -30,13 +30,16 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
-?>
-<article id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+@endphp
+@include('partials.product.breadcrumb')
+<article id="product-{{ the_ID() }}" @php wc_product_class( 'py-5', $product ); @endphp>
   @include('partials.product.details')
-  @include('partials.product.certs')
-  @include('partials.product.content')
-  @include('partials.product.reviews')
-	<?php
+  {{-- @include('partials.product.certs') --}}
+  {{-- @include('partials.product.sticky-add-to-cart') --}}
+	@php
+  woocommerce_output_related_products();
+	@endphp
+	@php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
 	 *
@@ -44,9 +47,7 @@ if ( post_password_required() ) {
 	 * @hooked woocommerce_show_product_images - 20
 	 */
 	// do_action( 'woocommerce_before_single_product_summary' );
-	?>
-	<div class="summary entry-summary">
-		<?php
+	// <div class="summary entry-summary">
 		/**
 		 * Hook: woocommerce_single_product_summary.
 		 *
@@ -60,9 +61,7 @@ if ( post_password_required() ) {
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
 		// do_action( 'woocommerce_single_product_summary' );
-		?>
-	</div>
-	<?php
+	// </div>
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 *
@@ -71,7 +70,7 @@ if ( post_password_required() ) {
 	 * @hooked woocommerce_output_related_products - 20
 	 */
 	// do_action( 'woocommerce_after_single_product_summary' );
-	?>
+	@endphp
 </article>
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+@php do_action( 'woocommerce_after_single_product' ); @endphp

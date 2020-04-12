@@ -14,6 +14,7 @@
  * @package 	WooCommerce/Templates
  * @version     1.6.4
  */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
@@ -22,7 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.product.breadcrumb')
   @while ( have_posts() ) @php the_post(); @endphp
     @php wc_get_template_part( 'content', 'single-product' ); @endphp
   @endwhile

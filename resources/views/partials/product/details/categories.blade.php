@@ -1,5 +1,4 @@
-
 @php
-$categories = wc_get_product_category_list( $product->get_id() );
+$categories = get_the_terms( $product->get_id(), 'types' );
 @endphp
-<p class="categories text-dark-gray">{!! $categories !!}</p>
+<p class="categories text-darkGray">{!! $categories !!}</p>

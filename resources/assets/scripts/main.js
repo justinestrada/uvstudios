@@ -8,7 +8,7 @@ import { Login } from './layouts/login';
 import { Register } from './layouts/register';
 // import { Announcement } from './layouts/announcement';
 import { LeftStickyMenu } from './layouts/leftStickyMenu';
-import { ToastCookiePolicy } from './layouts/toastCookiePolicy';
+import { CookiePolicy } from './layouts/CookiePolicy';
 import { QuickView } from './layouts/quickView';
 import { Splash } from './modules/Splash';
 import { Home } from './modules/Home';
@@ -22,7 +22,7 @@ jQuery(document).ready(() => {
 		Register.onLoad();
 		// Announcement.onLoad();
     LeftStickyMenu.onLoad();
-    ToastCookiePolicy.onLoad();
+    CookiePolicy.onLoad();
     QuickView.onLoad();
     // modules
     Splash.onLoad();

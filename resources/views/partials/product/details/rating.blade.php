@@ -1,4 +1,4 @@
-<?php
+@php
 /**
  * Single Product Rating
  *
@@ -14,30 +14,38 @@
  * @package WooCommerce/Templates
  * @version 3.6.0
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
-
 global $product;
-
 if ( ! wc_review_ratings_enabled() ) {
 	return;
 }
-
 $rating_count = $product->get_rating_count();
 $review_count = $product->get_review_count();
 $average      = $product->get_average_rating();
-
-if ( $rating_count > 0 ) : ?>
-
+@endphp
+@if ( $rating_count > 0 )
 	<div class="woocommerce-product-rating">
-		<?php echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
-		<?php if ( comments_open() ) : ?>
+		<?php // echo wc_get_rating_html( $average, $rating_count ); // WPCS: XSS ok. ?>
+    {{-- rating: {{ $rating_count }}<br>
+    review: {{ $review_count }}<br>
+    average: {{ $average }}--}}
+    <div class="d-inline-block">
+      @for ($i = 0; $i < $average; $i++)
+        @if ($i !== (int)$average)
+          <i class="fa fa-star text-yellow"></i>
+        @else
+          <i class="fa fa-star-half-o text-yellow"></i>
+        @endif
+      @endfor
+    </div>
+		@if ( comments_open() )
 			<?php //phpcs:disable ?>
-			<a href="#reviews" class="woocommerce-review-link smooth-scroll text-black" rel="nofollow">(<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)</a>
+      <a href="#reviews" class="woocommerce-review-link smooth-scroll text-black" rel="nofollow">
+        (<?php printf( _n( '%s customer review', '%s customer reviews', $review_count, 'woocommerce' ), '<span class="count">' . esc_html( $review_count ) . '</span>' ); ?>)
+      </a>
 			<?php // phpcs:enable ?>
-		<?php endif ?>
+		@endif
 	</div>
-
-<?php endif; ?>
+@endif
