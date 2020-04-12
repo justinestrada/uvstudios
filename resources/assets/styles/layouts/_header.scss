@@ -42,14 +42,21 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 24px;
-    width: 24px;
+    height: 16px;
+    width: 16px;
     background: $black;
     border-radius: 100%;
     color: $white;
     font-size: 0.5rem;
-    line-height: 24px;
+    line-height: 1rem;
     text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      height: 24px;
+      width: 24px;
+      font-size: 0.5rem;
+      line-height: 24px;
+    }
   }
 
   .btn-circle {

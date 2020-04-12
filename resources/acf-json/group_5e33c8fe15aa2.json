@@ -129,6 +129,28 @@
             ]
         },
         {
+            "key": "field_5e928b5358c79",
+            "label": "MC4WP Form",
+            "name": "mc4wp_form",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "mc4wp-form"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
             "key": "field_5e8c32fc07a43",
             "label": "Layout",
             "name": "",
@@ -320,5 +342,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586646991
+    "modified": 1586662280
 }

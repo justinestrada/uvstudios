@@ -15,7 +15,7 @@
           <div class="col-6 col-lg-3 d-flex align-items-center">
             <div>
               <p class="h1 text-uppercase mb-5">Before</p>
-              <p class="h1 text-uppercase mb-0">After<br><span class="text-primary text-uppercase">Chloe.</span></p>
+              <p class="h1 text-uppercase mb-0">After<br><strong class="text-primary text-uppercase">Chloe.</strong></p>
             </div>
           </div>
         @endif

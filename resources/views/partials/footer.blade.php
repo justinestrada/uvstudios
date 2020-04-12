@@ -69,7 +69,7 @@ $site_url = get_site_url();
     </div>
     <div class="footer-copyright row py-3">
       <div class="col-lg-6 mb-3 mb-lg-0">
-        <small>"Stay safe stay healthy", Tom and Nima UV Studios Team</small>
+        <p class="mb-0"><i>"Stay safe stay healthy," <br class="d-none d-lg-block"/> ~ UV Studios Team</i></p>
       </div>
       <div class="col-lg-6 text-center text-lg-right">
         <p class="mb-2">
