@@ -201,6 +201,30 @@
                     "mime_types": ""
                 },
                 {
+                    "key": "field_5e93bcb4bc8b8",
+                    "label": "Desktop Image",
+                    "name": "desktop_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
                     "key": "field_5e92013422f55",
                     "label": "Bottom Row Image 1",
                     "name": "bottom_row_img_1",
@@ -367,49 +391,6 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
-                }
-            ]
-        },
-        {
-            "key": "field_5e32937418d92",
-            "label": "Featured Products",
-            "name": "products",
-            "type": "repeater",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 1,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "sub_fields": [
-                {
-                    "key": "field_5e2e2d35f9e1d",
-                    "label": "Product",
-                    "name": "product",
-                    "type": "post_object",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [
-                        "product"
-                    ],
-                    "taxonomy": "",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "return_format": "object",
-                    "ui": 1
                 }
             ]
         },
@@ -776,5 +757,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586639449
+    "modified": 1586740420
 }

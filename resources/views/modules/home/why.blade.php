@@ -17,7 +17,7 @@
         </p>
         <a href="/blog" class="btn btn-outline-primary">Learn More</a>
       </div>
-      @if ($image = $section['image'])
+      @if ($image = $section['desktop_image'])
         <div class="d-none d-lg-block col-lg-6 offset-lg-1">
           <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="why-img w-100"/>
         </div>
