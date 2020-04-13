@@ -39,3 +39,71 @@ $rating_count = $product->get_rating_count();
     </div>
   </div>
 </section>
+
+<script>
+// TODO: move this to scripts/modules/single-product.js
+(function($) {
+$(document).ready(function() {
+/*
+  * Reviews Pagination
+  * */
+if ( $('#comments').length ) {
+    const postPerPage = 10;
+    const commentCount = $('.commentlist .review').length;
+    // if commentCount greater than 10
+    if ( commentCount > postPerPage ) {
+        // hide reviews eq > 10
+        const tempPostPerPage = postPerPage - 1;
+        $('.commentlist .review:gt(' + tempPostPerPage + ')').hide();
+        // create showing results
+        const results = $('<p id="reviews-pagination-results">');
+        results.html('Showing 1 - 10 reviews of ' + commentCount + ' results.');
+        $('.woocommerce-Reviews-title').after(results);
+        // create pagination
+        const reviewsPagination = $('<nav id="reviews-pagination" class="woocommerce-pagination">');
+        const reviewsPaginationList = $('<ul class="page-numbers">');
+        const paginationPages = Math.ceil(commentCount/postPerPage);
+        for ( let i = 1; i <= paginationPages; i++ ) {
+            const page = $('<li>');
+            const pageLink = $('<a>');
+            pageLink.addClass('page-numbers').attr('href', 'javascript:void(0);').html(i);
+            if ( i === 1) {
+                pageLink.addClass('current').attr('style', 'cursor: default;');
+            }
+            page.append(pageLink);
+            reviewsPaginationList.append(page);
+        }
+        reviewsPagination.append(reviewsPaginationList);
+        $('.commentlist').after(reviewsPagination);
+        // paginatino listeners
+        $('#reviews-pagination a.page-numbers').on('click', function() {
+            if ( $(this).hasClass('current') ) {
+                return false;
+            }
+            $('#reviews-pagination .page-numbers').removeClass('current').removeAttr('style');
+            const page = parseInt($(this).text());
+            const startIndex = ((page - 1) * postPerPage) + 1;
+            const endIndex = ((page * postPerPage) < commentCount) ? page * postPerPage : commentCount;
+            // hide reviews less than startIndex
+            let temp = startIndex - 1;
+            if ( temp ) {
+                $('.commentlist .review:lt(' + temp + ')').hide();
+            }
+            // show reviews greater than startIndex
+            temp = startIndex - 2;
+            if (temp >= 9) {
+                $('.commentlist .review:gt(' + temp + ')').show();
+            } else {
+                $('.commentlist .review').show();
+            }
+            // hide reviews greater than endIndex
+            temp = endIndex - 1;
+            $('.commentlist .review:gt(' + temp + ')').hide();
+            $('#reviews-pagination-results').html('Showing ' + startIndex + ' - ' + endIndex + ' reviews of ' + commentCount + ' results.');
+            $(this).addClass('current').attr('style', 'cursor: default;');
+        });
+    }
+}
+});
+})(jQuery);
+</script>

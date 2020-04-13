@@ -38,10 +38,19 @@ $rating = $product->get_average_rating();
   </div>
   <div class="card-body">
     <a href="{{ get_permalink($post_id) }}" title="{{ $product->get_title() }}" class="d-block h3 text-black mb-3" >{{ $product->get_title() }}</a>
-    <div class="star-rating text-yellow mb-3" title="Rating" style="float: none;" >
+    {{-- <div class="star-rating text-yellow mb-3" title="Rating" style="float: none;" >
       <span style="width: {{ ( $rating / 5 ) * 100 }}%;">
         <strong itemprop="ratingValue" class="rating">{{ $rating }}</strong> out of 5
       </span>
+    </div> --}}
+    <div class="mb-3">
+      @for ($i = 0; $i < $rating; $i++)
+        @if ($i !== (int)$rating)
+          <i class="fa fa-star fs-1.25x text-yellow"></i>
+        @else
+          <i class="fa fa-star-half-o fs-1.25x text-yellow"></i>
+        @endif
+      @endfor
     </div>
     <hr>
     <div class="row">
