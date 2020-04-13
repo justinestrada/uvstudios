@@ -25,7 +25,7 @@
                       @if ($i !== (int)$review['rating'])
                         <i class="fa fa-star fs-1.25x text-yellow" aria-hidden="true"></i>
                       @else
-                        <i class="fa fa-star-half fs-1.25x text-yellow" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o fs-1.25x text-yellow" aria-hidden="true"></i>
                       @endif
                     @endfor
                   </div>

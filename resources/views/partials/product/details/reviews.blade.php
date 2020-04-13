@@ -1,5 +1,6 @@
 @php
 $average = $product->get_average_rating();
+$rating_count = $product->get_rating_count();
 @endphp
 <section id="reviews-section">
   <div id="accordionWriteReview" class="mb-5">
@@ -7,7 +8,7 @@ $average = $product->get_average_rating();
       <div id="reviewsOne" class="card-header bg-white p-0">
         <h5 class="mb-0">
           <button class="btn btn-link text-black text-left w-100 px-2 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Reviews {{ ($rating_count = $product->get_rating_count()) ? '(' . $rating_count . ')' : '' }}
+            Reviews {{ ($rating_count) ? '(' . $rating_count . ')' : '' }}
               <span class="float-right">
                 @if ($average)
                   {{-- <span class="d-inline-block star-rating text-yellow" title="Rating" style="float: none;" >

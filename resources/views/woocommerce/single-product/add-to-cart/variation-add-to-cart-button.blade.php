@@ -30,7 +30,7 @@ global $product;
     <div class="container">
       <div class="row">
         <div class="col-auto d-lg-none d-flex align-items-center">
-          <div class="text-white">
+          <div class="text-black">
             @include('partials.product.details.price', ['class' => 'mb-0'])
           </div>
         </div>
