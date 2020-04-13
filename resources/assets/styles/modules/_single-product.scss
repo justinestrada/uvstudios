@@ -29,39 +29,37 @@
       }
     }
 
-    #carousel-section {
-      .carousel-inner {
-        border-radius: 0.25rem;
+    .carousel-inner {
+      border-radius: 0.25rem;
 
-        .carousel-item {
-          height: 384px;
-          background-position: center;
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-      }
-
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        filter: invert(100%);
-      }
-
-      .carousel-thumbnail {
-        cursor: pointer;
-        background-repeat: no-repeat;
-        background-size: contain;
+      .carousel-item {
+        height: 384px;
         background-position: center;
-        height: 64px;
-        margin-bottom: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
 
-        &:last-child {
-          margin-bottom: 0;
-        }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(100%);
+    }
 
-        &.active {
-          cursor: default;
-          opacity: 0.85;
-        }
+    .carousel-thumbnail {
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 64px;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active {
+        cursor: default;
+        opacity: 0.85;
       }
     }
   }
@@ -182,6 +180,6 @@
 
   &.woocommerce button.button {
     @extend .btn;
-    @extend .btn-outline-primary;
+    @extend .btn-primary;
   }
 }

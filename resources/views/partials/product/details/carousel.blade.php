@@ -1,10 +1,16 @@
 
 @if ( $product->get_image_id() )
+  <style>
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(100%);
+  }
+  </style>
   @php
   $attachment_ids = $product->get_gallery_image_ids();
   @endphp
   @if ( $attachment_ids && $product->get_image_id() )
-    <div id="carousel-section" class="row">
+    <div class="row">
       <div class="d-none d-lg-block col-lg-4 col-xl-3">
         <div class="carousel-thumbnail z-depth-1 rounded active" style="background-image: url('{{ wp_get_attachment_image_src($product->get_image_id(), 'full')[0] }}');"
            data-target="#carouselProduct" data-slide-to="0" ></div>

@@ -4,7 +4,7 @@
     $cat = get_the_terms( $product->get_id(), 'product_cat' );
     @endphp
     @if ($cat)
-      <a href="{{ get_site_url() }}/product-category/{{  $cat[0]->slug }}" class="d-block text-gray mb-0">{{ $cat[0]->name }}</a>
+      <a href="{{ get_site_url() }}/product-category/{{  $cat[0]->slug }}" class="d-block text-dark-gray mb-0">{{ $cat[0]->name }}</a>
     @endif
     <h2 class="fs-3.5x mb-0">{!! get_the_title() !!}</h2>
   </div>
