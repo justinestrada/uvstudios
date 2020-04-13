@@ -177,6 +177,21 @@
                     "new_lines": ""
                 },
                 {
+                    "key": "field_5e94042dda835",
+                    "label": "Button",
+                    "name": "button",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
                     "key": "field_5e904bac8254b",
                     "label": "Image",
                     "name": "image",
@@ -757,5 +772,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586740420
+    "modified": 1586758753
 }

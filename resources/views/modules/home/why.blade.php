@@ -15,7 +15,9 @@
         <p class="fs-1.25x mb-3 mb-lg-5">
           {!! $section['text'] !!}
         </p>
-        <a href="/blog" class="btn btn-outline-primary">Learn More</a>
+        @if ($button = $section['button'])
+          <a href="{{ $button['url'] }}" class="btn btn-outline-primary">{{ $button['title'] }}</a>
+        @endif
       </div>
       @if ($image = $section['desktop_image'])
         <div class="d-none d-lg-block col-lg-6 offset-lg-1">
