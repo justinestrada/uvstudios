@@ -24,7 +24,7 @@
       </div>
       <div class="col-lg-8 col-xl-9 mb-5 mb-lg-0">
         <div id="carouselProduct" class="carousel slide" data-ride="carousel" data-interval="false" >
-          <div class="carousel-inner card">
+          <div class="carousel-inner rounded" style="border: 1px solid rgba(7, 7, 7, 0.125);">
             <div class="carousel-item active" style="background-image: url('{{ wp_get_attachment_image_src($product->get_image_id(), 'full')[0] }}');">
               <span class="visibility-hidden" style="visibility: hidden;">Slide</span>
             </div>
