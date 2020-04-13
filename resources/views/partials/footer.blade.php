@@ -2,7 +2,9 @@
 @php
 $site_url = get_site_url();
 @endphp
-@include('partials.footer.social')
+@if (is_page_template('views/template-home.blade.php') || is_page_template('views/template-about.blade.php'))
+  @include('partials.footer.social')
+@endif
 <footer id="footer" class="py-5">
   <div class="container">
     <div class="row mb-5 mb-lg-3">

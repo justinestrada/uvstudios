@@ -1,7 +1,7 @@
 
 <div id="toast-cookie-policy" class="toast position-fixed mx-auto" style="display: none;" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" >
   <div class="toast-body bg-white p-3" style="border: 1px solid #ddd;">
-    <button type="button" class="close" data-dismiss="toast" aria-label="Close">
+    <button type="button" class="close" data-dismiss="toast" aria-label="Close" style="opacity: 1;">
       <i class="fa fa-times" aria-hidden="hidden" style="height: 1.5rem;" ></i>
       <span class="sr-only">Close</span>
     </button>

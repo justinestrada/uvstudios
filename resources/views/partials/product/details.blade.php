@@ -3,11 +3,11 @@
     @include('partials.product.details.title')
   </section>
   <div class="row">
-    <div class="col-lg-8 mb-3 mb-lg-0">
+    <div class="col-lg-7 col-xl-8 mb-3 mb-lg-0">
       @include('partials.product.details.images')
       @include('partials.product.details.content')
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-5 col-xl-4">
       <section id="title-desktop" class="d-none d-lg-flex">
         @include('partials.product.details.title')
       </section>

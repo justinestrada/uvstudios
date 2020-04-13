@@ -9,7 +9,7 @@ import { Register } from './layouts/register';
 // import { Announcement } from './layouts/announcement';
 import { LeftStickyMenu } from './layouts/leftStickyMenu';
 import { CookiePolicy } from './layouts/CookiePolicy';
-import { QuickView } from './layouts/quickView';
+import { QuickView } from './layouts/QuickView';
 import { Splash } from './modules/Splash';
 import { Home } from './modules/Home';
 import { Product } from './modules/Product';
