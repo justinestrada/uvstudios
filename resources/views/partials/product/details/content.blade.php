@@ -1,4 +1,4 @@
-<section id="content" class="mb-5">
+<section id="content">
   <div class="row mb-5">
     <div class="col">
       {!! get_the_content() !!}

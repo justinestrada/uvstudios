@@ -1,4 +1,4 @@
-<?php
+@php
 /**
  * Single variation cart button
  *
@@ -10,11 +10,11 @@
 defined( 'ABSPATH' ) || exit;
 
 global $product;
-?>
+@endphp
 <div class="woocommerce-variation-add-to-cart variations_button">
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-	<?php
+	@php
 	do_action( 'woocommerce_before_add_to_cart_quantity' );
 
 	woocommerce_quantity_input( array(
@@ -24,7 +24,7 @@ global $product;
 	) );
 
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
-	?>
+	@endphp
 
   <div id="sticky-add-to-cart" class="bg-black bg-lg-transparent py-1">
     <div class="container">

@@ -5,7 +5,7 @@ $site_url = get_site_url();
 @include('partials.footer.social')
 <footer id="footer" class="py-5">
   <div class="container">
-    <div class="row mb-3">
+    <div class="row mb-5 mb-lg-3">
       <div class="col-6 col-lg-3 mb-3 mb-lg-0">
         <h4 class="text-uppercase tk-soleil mb-3">Shop</h4>
         @if ( has_nav_menu('footer_menu_1') )
@@ -42,7 +42,7 @@ $site_url = get_site_url();
           </div>
         @endif
       </div>
-      <div class="col-6 col-lg-3 mb-3 mb-lg-0">
+      <div class="col-6 col-lg-3 mb-5 mb-lg-0">
         <h4 class="text-uppercase tk-soleil mb-3">Support</h4>
         @if ( has_nav_menu('footer_menu_3') )
           {!! wp_nav_menu([

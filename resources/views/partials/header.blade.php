@@ -21,7 +21,7 @@
             </a>
           </div>
           <div class="col-6 col-lg-4 text-right pl-0">
-            <div class="d-inline-block position-relative mr-3">
+            <div class="d-inline-block position-relative mr-1 mr-lg-3">
               @if (is_user_logged_in())
                 <a href="{{ get_site_url() }}/my-account" class="btn btn-circle" title="My Account" >
                   <img src="{{ App\asset_path('images/icon/avatar.svg') }}" alt="User" class="btn-img-default" />
@@ -34,7 +34,7 @@
                 </button>
               @endif
             </div>
-            <div class="d-inline-block position-relative mr-3">
+            <div class="d-inline-block position-relative mr-1 mr-lg-3">
               <button type="button" class="btn btn-circle btn-open-side-cart" aria-label="Open Cart" >
                 <img src="{{ App\asset_path('images/icon/cart.svg') }}" alt="Cart" class="btn-img-default"/>
                 <img src="{{ App\asset_path('images/icon/cart-white.svg') }}" alt="Cart" class="btn-img-hover"/>

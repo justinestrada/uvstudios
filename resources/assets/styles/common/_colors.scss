@@ -39,6 +39,16 @@
 //   color: map-get($theme-colors, "gray") !important;
 // }
 
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+@include media-breakpoint-up(lg) {
+  .bg-lg-transparent {
+    background-color: transparent !important;
+  }
+}
+
 // .bg-primary {
 //   background-color: map-get($theme-colors, "primary") !important;
 // }

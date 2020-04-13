@@ -1,5 +1,15 @@
 
 .single-product {
+  #details {
+    .amount {
+      font-size: 2rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 3rem;
+      }
+    }
+  }
+
   #images {
     .product-image {
       background-size: contain;
@@ -102,14 +112,10 @@
         border-top: 1px solid $light-gray;
         z-index: 2;
       }
-    }
-  }
 
-  .amount {
-    font-size: 2rem;
-
-    @include media-breakpoint-up(lg) {
-      font-size: 3rem;
+      @include media-breakpoint-down(lg) {
+        box-shadow: none !important;
+      }
     }
   }
 
@@ -130,10 +136,14 @@
       font-size: 1rem;
       margin-bottom: 1rem;
     }
+
+    #respond {
+      padding: 1rem;
+    }
   }
 
   &.woocommerce button.button {
     @extend .btn;
-    @extend .btn-primary;
+    @extend .btn-outline-primary;
   }
 }
