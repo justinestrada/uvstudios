@@ -11,6 +11,9 @@
   .xoo-wsc-img-col img {
     width: 100% !important;
     height: auto !important;
+
+    @extend .z-depth-1;
+    @extend .rounded;
   }
 
   .xoo-wsc-sum-col {

@@ -1,15 +1,8 @@
-<style>
-#social_shares {
-  list-style: none;
-}
-#social-shares li {
-  display: inline-block;
-}
-</style>
+
 @php
 global $post;
 @endphp
-<section id="breadcrumb" class="bg-light-gray py-1">
+<section id="breadcrumb" class="bg-light-gray py-2">
   <div class="container">
     <div class="row">
       <div class="col-md mb-1 mb-md-0">

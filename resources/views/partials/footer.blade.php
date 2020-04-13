@@ -69,13 +69,13 @@ $site_url = get_site_url();
     </div>
     <div class="footer-copyright row py-3">
       <div class="col-lg-6 mb-3 mb-lg-0">
-        <p class="mb-0">
+        <p class="text-center text-lg-left mb-0">
           <i class="fa fa-cc-visa fs-1.25x mr-3"></i>
           <i class="fa fa-cc-amex fs-1.25x mr-3"></i>
           <i class="fa fa-cc-mastercard fs-1.25x mr-3"></i>
           <i class="fa fa-cc-discover fs-1.25x"></i>
         </p>
-        <p class="mb-0"><i>"Stay safe stay healthy," <br class="d-none d-lg-block"/> ~ UV Studios Team</i></p>
+        <p class="text-center text-lg-left mb-0"><i>"Stay safe stay healthy," <br class="d-none d-lg-block"/> ~ UV Studios Team</i></p>
       </div>
       <div class="col-lg-6 text-center text-lg-right">
         <p class="mb-2">

@@ -10,6 +10,7 @@
         @yield('content')
       </div>
     </main>
+    @include('partials.toast.cookie-policy')
     @php do_action('get_footer') @endphp
     @include('partials.footer')
     {{-- @include('partials.toast.cookie-policy') --}}

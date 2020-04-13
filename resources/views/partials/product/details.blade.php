@@ -1,5 +1,5 @@
 <section id="details" class="container mb-5">
-  <section id="title" class="d-lg-none">
+  <section id="title" class="d-lg-none mb-3">
     @include('partials.product.details.title')
   </section>
   <div class="row">
@@ -13,7 +13,7 @@
       </section>
       <hr class="mb-3"/>
       @include( 'partials.product.details.rating' )
-      <div class="mb-3">{!! get_the_excerpt(get_the_ID()) !!} <a href="#content" title="Read More" class="d-block text-black smooth-scroll"><u>Read more...</u></a></div>
+      <div class="excerpt mb-3">{!! get_the_excerpt(get_the_ID()) !!} <a href="#content" title="Read More" class="d-block text-black smooth-scroll"><u>Read more...</u></a></div>
       @php
       woocommerce_template_single_add_to_cart();
       @endphp

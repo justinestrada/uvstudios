@@ -2,8 +2,8 @@
 <div class="modal fade" id="fullScreenModal" tabindex="-1" role="dialog" aria-labelledby="fullScreenModalLabel" aria-hidden="true" style="padding-right: 0;">
   <div class="modal-dialog modal-full-screen modal-dialog-centered" role="document">
     <div class="modal-content h-100">
-      <div class="modal-body" >
-        <div class="container d-flex justify-content-center align-items-center position-relative h-100">
+      <div class="modal-body">
+        <div class="container d-flex justify-content-center align-items-center position-relative" style="height: 100vh;">
           <button type="button" class="btn btn-close-full-screen-menu hover-spin" data-dismiss="modal" aria-label="Close">
             <img src="{{ App\asset_path('images/icon/close.svg') }}" alt="Close" style="position: relative; top: -4px; height: 24px;" >
           </button>

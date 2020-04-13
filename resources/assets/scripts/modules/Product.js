@@ -12,7 +12,9 @@ export const Product = {
     }
   },
   initImageGallery: function() {
-    $('#lightgallery').lightGallery();
+    $('#lightgallery').lightGallery({
+      zoom: true,
+    });
   },
   onInitAttributeLabel: function() {
     // init set selected Attribute Label

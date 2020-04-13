@@ -34,6 +34,6 @@ global $wp;
       </div>
     </div>
   </div>
-  <input type="hidden" name="action" value="giftoflifecbd_register" />
+  <input type="hidden" name="action" value="uvstudios_register" />
   <button class="btn btn-secondary btn-rounded btn-block my-2 waves-effect z-depth-0" type="submit" >Create Account</button>
 </form>

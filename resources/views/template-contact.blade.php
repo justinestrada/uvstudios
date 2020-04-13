@@ -7,7 +7,7 @@
 @section('content')
   @include('partials.page.breadcrumb')
   @while(have_posts()) @php the_post() @endphp
-    @include('modules.template-contact.form')
-    @include('modules.template-contact.faq')
+    @include('modules.contact.form')
+    @include('modules.contact.faq')
   @endwhile
 @endsection

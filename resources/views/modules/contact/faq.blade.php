@@ -12,7 +12,7 @@ $questions = get_field('questions');
             <div class="card z-depth-1 mb-3">
               <div class="card-header" id="heading{{ $index }}">
                 <h5 class="mb-0">
-                  <button class="btn btn-link text-black text-left w-100" data-toggle="collapse" data-target="#collapse{{ $index }}" aria-expanded="{{ ($index) ? 'false' : 'true' }}" aria-controls="collapse{{ $index }}">
+                  <button class="btn btn-link text-black text-left w-100 p-0" data-toggle="collapse" data-target="#collapse{{ $index }}" aria-expanded="{{ ($index) ? 'false' : 'true' }}" aria-controls="collapse{{ $index }}">
                     {!! $item['question'] !!}
                     <img src="{{ App\asset_path('images/icon/arrow.svg') }}" class="float-right" style="height: 24px; margin: 6px 0;" />
                   </button>

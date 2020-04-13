@@ -7,8 +7,7 @@
 @section('content')
   @include('partials.page.breadcrumb', ['bg_color' => 'lightest-gray'])
   @while(have_posts()) @php the_post() @endphp
-    @include('modules.template-about.mission')
-    @include('modules.template-about.our-story')
-    @include('modules.template-about.instagram')
+    @include('modules.about.mission')
+    @include('modules.about.our-story')
   @endwhile
 @endsection

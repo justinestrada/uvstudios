@@ -18,6 +18,10 @@
     }
   }
 
+  .excerpt a:not(.smooth-scroll) {
+    display: none;
+  }
+
   .attribute-label {
     width: 100%;
     color: $black;
@@ -101,24 +105,32 @@
     }
   }
 
-  // .amount {
-  //   font-size: 1.25rem;
-  // }
+  .amount {
+    font-size: 2rem;
 
-  // #reviews {
-  //   #comments ol.commentlist {
-  //     padding: 0;
-  //   }
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+  }
 
-  //   .woocommerce-review__author {
-  //     text-transform: capitalize;
-  //   }
+  #reviews {
+    #comments {
+      padding: 1rem;
 
-  //   .woocommerce-Reviews-title {
-  //     font-size: 1rem;
-  //     margin-bottom: 1rem;
-  //   }
-  // }
+      ol.commentlist {
+        padding: 0;
+      }
+    }
+
+    .woocommerce-review__author {
+      text-transform: capitalize;
+    }
+
+    .woocommerce-Reviews-title {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
 
   &.woocommerce button.button {
     @extend .btn;

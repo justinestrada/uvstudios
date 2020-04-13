@@ -25,7 +25,7 @@ add_action('wp_enqueue_scripts', function () {
 
     if (is_product()) {
         wp_enqueue_script('lightgallery', get_template_directory_uri() . '/assets/scripts/lib/lightgallery.min.js', [], null, true);
-        wp_enqueue_script('lg-zoom', get_template_directory_uri() . '/assets/scripts/lib/lg-zoom.js', [], null, true);
+        // wp_enqueue_script('lg-zoom', get_template_directory_uri() . '/assets/scripts/lib/lg-zoom.js', [], null, true);
         // lg-thumbnail.min.js
     }
 

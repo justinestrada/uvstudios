@@ -1,27 +1,31 @@
 @php
-$rating = $product->get_average_rating();
+$average = $product->get_average_rating();
 @endphp
 <section id="reviews-section">
   <div id="accordionWriteReview" class="mb-5">
-    <div class="card">
+    <div class="card z-depth-1">
       <div id="reviewsOne" class="card-header bg-white p-0">
         <h5 class="mb-0">
-          <button class="text-left btn-transparent btn-block p-0 py-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <button class="btn btn-link text-black text-left w-100 px-2" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             Reviews {{ ($rating_count = $product->get_rating_count()) ? '(' . $rating_count . ')' : '' }}
               <span class="float-right">
-                @if ($rating)
+                @if ($average)
                   {{-- <span class="d-inline-block star-rating text-yellow" title="Rating" style="float: none;" >
                     <span style="width: {{ ( $rating / 5 ) * 100 }}%;">
                       <strong itemprop="ratingValue" class="rating">{{ $rating }}</strong> out of 5
                     </span>
                   </span> --}}
                   <span class="d-inline-block">
-                    @for ($i = 0; $i < $rating; $i++)
-                      <i class="fa fa-star"></i>
+                    @for ($i = 0; $i < $average; $i++)
+                      @if ($i !== (int)$average)
+                        <i class="fa fa-star text-yellow"></i>
+                      @else
+                        <i class="fa fa-star-half-o text-yellow"></i>
+                      @endif
                     @endfor
                   </span>
                 @endif
-                <i class="fa fa-angle-down" style="font-size: 1.5rem;" aria-hidden="true"></i>
+                <img src="{{ App\asset_path('images/icon/arrow.svg') }}" class="float-right" style="height: 24px; margin: 6px 0;" />
               </span>
           </button>
         </h5>
