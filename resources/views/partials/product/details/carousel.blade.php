@@ -12,19 +12,19 @@
   @if ( $attachment_ids && $product->get_image_id() )
     <div class="row">
       <div class="d-none d-lg-block col-lg-4 col-xl-3">
-        <div class="carousel-thumbnail z-depth-1 rounded active" style="background-image: url('{{ wp_get_attachment_image_src($product->get_image_id(), 'full')[0] }}');"
+        <div class="carousel-thumbnail card rounded active" style="background-image: url('{{ wp_get_attachment_image_src($product->get_image_id(), 'full')[0] }}');"
            data-target="#carouselProduct" data-slide-to="0" ></div>
         @foreach ( $attachment_ids as $index => $attachment_id )
           @php
           $image = wp_get_attachment_image_src($attachment_id, 'full');
           @endphp
-          <div class="carousel-thumbnail z-depth-1 rounded" style="background-image: url('{{ $image[0] }}');"
+          <div class="carousel-thumbnail card rounded" style="background-image: url('{{ $image[0] }}');"
               data-target="#carouselProduct" data-slide-to="{{ ($index + 1) }}" ></div>
         @endforeach
       </div>
       <div class="col-lg-8 col-xl-9 mb-5 mb-lg-0">
         <div id="carouselProduct" class="carousel slide" data-ride="carousel" data-interval="false" >
-          <div class="carousel-inner z-depth-1">
+          <div class="carousel-inner card">
             <div class="carousel-item active" style="background-image: url('{{ wp_get_attachment_image_src($product->get_image_id(), 'full')[0] }}');">
               <span class="visibility-hidden" style="visibility: hidden;">Slide</span>
             </div>
@@ -56,7 +56,7 @@
     </div>
     <div id="carousel-thumbnails" class="row d-lg-none">
       <div class="col">
-        <div class="carousel-thumbnail z-depth-1 rounded active" style="background-image: url('{{ wp_get_attachment_image_src($product->get_image_id(), 'full')[0] }}');"
+        <div class="carousel-thumbnail card rounded active" style="background-image: url('{{ wp_get_attachment_image_src($product->get_image_id(), 'full')[0] }}');"
           data-target="#carouselProduct" data-slide-to="0" ></div>
       </div>
       @foreach ( $attachment_ids as $index => $attachment_id )
@@ -64,7 +64,7 @@
         $image = wp_get_attachment_image_src($attachment_id, 'full');
         @endphp
         <div class="col">
-          <div class="carousel-thumbnail z-depth-1 rounded" style="background-image: url('{{ $image[0] }}');"
+          <div class="carousel-thumbnail card rounded" style="background-image: url('{{ $image[0] }}');"
             data-target="#carouselProduct" data-slide-to="{{ ($index + 1) }}" ></div>
         </div>
       @endforeach

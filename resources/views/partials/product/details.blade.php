@@ -13,10 +13,12 @@
           @endif
         </section>
       @endif
-      @include('partials.product.details.content')
+      <div id="content-desktop" class="d-none d-lg-block">
+        @include('partials.product.details.content')
+      </div>
     </div>
     <div class="col-lg-5 col-xl-4">
-      <section id="title-desktop" class="d-none d-lg-flex">
+      <section id="title-desktop" class="d-none d-lg-block">
         @include('partials.product.details.title')
       </section>
       <hr class="mb-3"/>
@@ -34,7 +36,10 @@
           <span class="sku">{{ ( $sku = $product->get_sku() ) ? $sku : esc_html__( 'N/A', 'woocommerce' ) }}</span>
         </span>
       @endif
-      <hr class="mb-0"/>
+      <hr class="mb-5"/>
+      <div id="content-mobile" class="d-lg-none mb-5">
+        @include('partials.product.details.content')
+      </div>
       @include('partials.product.details.reviews')
     </div>
   </div>

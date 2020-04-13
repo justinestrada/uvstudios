@@ -62,7 +62,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
         @foreach( $options['options'] as $key => $option )
           <div class="col-6 mb-3">
               <div class="form-group mb-0">
-                <label for="attribute_{{ esc_attr( sanitize_title( $attribute_name ) ) }}" class="attribute-label btn btn-outline-primary" value="{{ $option }}">
+                <label for="attribute_{{ esc_attr( sanitize_title( $attribute_name ) ) }}" class="attribute-label btn btn-outline-black" value="{{ $option }}">
                   {{ $option }}
                 </label>
               </div>

@@ -3,7 +3,7 @@ $average = $product->get_average_rating();
 @endphp
 <section id="reviews-section">
   <div id="accordionWriteReview" class="mb-5">
-    <div class="card z-depth-1">
+    <div class="card">
       <div id="reviewsOne" class="card-header bg-white p-0">
         <h5 class="mb-0">
           <button class="btn btn-link text-black text-left w-100 px-2 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">

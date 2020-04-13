@@ -137,11 +137,11 @@ function display_sidebar()
     return $display;
 }
 
-/*
+/**
  * WooCommerce product Get Default Variation ID
  * @return integer
  */
-function giftoflifecbd_product_get_default_variation_id($product) {
+function product_get_default_variation_id($product) {
     if ( $product->get_type() == 'variable' ) {
       $attributes = $product->get_available_variations();
       return $attributes[0]['variation_id'];
