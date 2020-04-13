@@ -7,6 +7,8 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
+define('THEME_VERSION', '0.2.0');
+
 /**
  * Theme assets
  */
@@ -18,7 +20,7 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_style('lightgallery', get_template_directory_uri() . '/assets/styles/lib/lightgallery.min.css', false, null);
     }
 
-    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
+    wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, THEME_VERSION);
     // wp_enqueue_style('sage/main.css', 'https://giftoflifecbd.com/wp-content/themes/giftoflifecbd/dist/styles/main.css', false, null);
 
     wp_enqueue_script('recaptcha', 'https://www.google.com/recaptcha/api.js', [], null, true);
@@ -37,7 +39,7 @@ add_action('wp_enqueue_scripts', function () {
         'posts_per_page' => get_option('posts_per_page')
     );
 
-    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], THEME_VERSION, true);
     // wp_enqueue_script('sage/main.js', 'https://giftoflifecbd.com/wp-content/themes/giftoflifecbd/dist/scripts/main.js', ['jquery'], null, true);
 
     wp_localize_script( 'sage/main.js', 'THEME_VARS', $THEME_VARS );
