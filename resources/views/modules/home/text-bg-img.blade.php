@@ -22,7 +22,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
           <p class="text-white font-weight-bold fs-1.25x mb-3">THE CHLOE</p>
-          <hr style="width: 3rem; border: 0.25rem solid white;"/>
+          <hr style="width: 3rem; border: 0.125rem solid white;"/>
           <h2 class="text-white fs-lg-3.5x mb-3">FAR-UVC <br class="d-lg-none">Disinfectant Light</h2>
           <p class="text-white fs-1.25x mb-5">{!! $text_bg_img['text'] !!}</p>
           <a href="/products/the-chloe" class="btn btn-primary">Buy Now</a>

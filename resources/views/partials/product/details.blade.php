@@ -4,7 +4,15 @@
   </section>
   <div class="row">
     <div class="col-lg-7 col-xl-8 mb-3 mb-lg-0">
-      @include('partials.product.details.images')
+      @if ($gallery = get_field('gallery'))
+        <section id="images">
+          @if ($gallery['type'] === 'carousel')
+            @include('partials.product.details.carousel', ['gallery' => $gallery])
+          @elseif ($gallery['type'] === 'lightgallery')
+            @include('partials.product.details.lightgallery', ['gallery' => $gallery])
+          @endif
+        </section>
+      @endif
       @include('partials.product.details.content')
     </div>
     <div class="col-lg-5 col-xl-4">

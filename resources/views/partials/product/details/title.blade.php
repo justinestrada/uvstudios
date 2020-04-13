@@ -1,13 +1,11 @@
 <div class="row">
   <div class="col">
-    {{--
     @php
-    $type = get_the_terms( $product->get_id(), 'type' );
+    $cat = get_the_terms( $product->get_id(), 'product_cat' );
     @endphp
-    @if ($type)
-      <a href="{{ get_site_url() }}/type/{{  $type[0]->slug }}" class="d-block text-gray mb-0">{{ $type[0]->name }}</a>
+    @if ($cat)
+      <a href="{{ get_site_url() }}/product-category/{{  $cat[0]->slug }}" class="d-block text-gray mb-0">{{ $cat[0]->name }}</a>
     @endif
-    --}}
     <h2 class="fs-3.5x mb-0">{!! get_the_title() !!}</h2>
   </div>
   <div class="col-auto">

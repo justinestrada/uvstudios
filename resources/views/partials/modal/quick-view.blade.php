@@ -29,7 +29,7 @@
               <form action="{{ get_site_url() }}/shop" method="POST" class="cart d-inline-block" enctype="multipart/form-data" >
                 <button type="submit" name="add-to-cart" class="single_add_to_cart_button quick-view-cart btn btn-primary btn-rounded" >Add To Cart</button>
               </form>
-              <span class="quick-view-out-of-stock d-inline-block badge badge-danger">Out of Stock</span>
+              {{-- <span class="quick-view-out-of-stock d-inline-block badge badge-danger">Out of Stock</span> --}}
             </div>
           </div>
         </div>

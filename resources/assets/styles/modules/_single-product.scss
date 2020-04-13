@@ -11,19 +11,57 @@
   }
 
   #images {
-    .product-image {
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 384px;
-      border: 1px solid $light-gray;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
+    #lightgallery {
+      .product-image {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 384px;
+        border: 1px solid $light-gray;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      @include media-breakpoint-up(xl) {
+        .col-xl-4 .product-image {
+          background-size: cover;
+        }
+      }
     }
 
-    @include media-breakpoint-up(xl) {
-      .col-xl-4 .product-image {
-        background-size: cover;
+    #carousel-section {
+      .carousel-inner {
+        border-radius: 0.25rem;
+
+        .carousel-item {
+          height: 384px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(100%);
+      }
+
+      .carousel-thumbnail {
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 64px;
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &.active {
+          cursor: default;
+          opacity: 0.85;
+        }
       }
     }
   }
@@ -113,7 +151,7 @@
         z-index: 2;
       }
 
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-up(lg) {
         box-shadow: none !important;
       }
     }

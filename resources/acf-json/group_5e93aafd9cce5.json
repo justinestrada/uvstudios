@@ -3,10 +3,10 @@
     "title": "Product",
     "fields": [
         {
-            "key": "field_5e93ab02b849a",
-            "label": "Images Per Row",
-            "name": "images_per_row",
-            "type": "number",
+            "key": "field_5e93f0381c97e",
+            "label": "Gallery Settings",
+            "name": "gallery",
+            "type": "group",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -15,13 +15,65 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": 2,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e93ef8d1c97d",
+                    "label": "Type",
+                    "name": "type",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "carousel": "Carousel",
+                        "lightgallery": "Light Gallery"
+                    },
+                    "default_value": [
+                        "carousel"
+                    ],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5e93ab02b849a",
+                    "label": "Images Per Row",
+                    "name": "images_per_row",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e93ef8d1c97d",
+                                "operator": "==",
+                                "value": "lightgallery"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 2,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -41,5 +93,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586735910
+    "modified": 1586753668
 }

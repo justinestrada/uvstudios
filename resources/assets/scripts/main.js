@@ -12,6 +12,7 @@ import { CookiePolicy } from './layouts/CookiePolicy';
 import { QuickView } from './layouts/QuickView';
 import { Splash } from './modules/Splash';
 import { Home } from './modules/Home';
+// import { ArchiveProduct } from './modules/ArchiveProduct';
 import { Product } from './modules/Product';
 
 // Load Events
@@ -27,6 +28,7 @@ jQuery(document).ready(() => {
     // modules
     Splash.onLoad();
     Home.onLoad();
+    // ArchiveProduct.onLoad();
     Product.onLoad();
 	});
 });
