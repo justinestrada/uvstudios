@@ -26,7 +26,7 @@ global $product;
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	@endphp
 
-  <div id="sticky-add-to-cart" class="bg-black bg-lg-transparent py-1">
+  <div id="sticky-add-to-cart" class="bg-white bg-lg-transparent py-1" style="box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.16),0 -2px 10px 0 rgba(0,0,0,0.12) !important;">
     <div class="container">
       <div class="row">
         <div class="col-auto d-lg-none d-flex align-items-center">
@@ -35,7 +35,7 @@ global $product;
           </div>
         </div>
         <div class="col p-md-0">
-          <button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+          <button type="submit" class="single_add_to_cart_button button alt w-100"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
         </div>
       </div>
     </div>

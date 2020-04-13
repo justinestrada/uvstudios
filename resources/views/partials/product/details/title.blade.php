@@ -8,7 +8,7 @@
     @endif
     <h2 class="fs-3.5x mb-0">{!! get_the_title() !!}</h2>
   </div>
-  <div class="col-auto">
+  <div class="col-auto d-flex align-items-center">
     @if ( $product->is_on_sale() )
       <span class="woocommerce-Price-amount amount sale-price mr-2" >
         <span class="woocommerce-Price-currencySymbol">{!! get_woocommerce_currency_symbol() !!}</span>
