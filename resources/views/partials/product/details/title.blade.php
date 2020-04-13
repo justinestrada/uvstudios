@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col">
+  <div class="col pr-0">
     @php
     $cat = get_the_terms( $product->get_id(), 'product_cat' );
     @endphp

@@ -30,9 +30,11 @@ $rating = $product->get_average_rating();
 @endphp
 <div <?php wc_product_class( 'card product-card z-depth-1', $product ); ?>>
   <div class="view overlay" style="background-image: url('{{ wp_get_attachment_url( get_post_thumbnail_id($post_id) ) }}')">
-    <div class="mask mask-black d-flex justify-content-center align-items-center" >
-      <button type="button" class="btn btn-primary btn-rounded btn-card-overlay" data-toggle="modal" data-target="#quickViewModal" data-post-id="{{ $post_id }}" >Quick View</button>
-    </div>
+    @if (!is_product())
+      <div class="mask mask-black d-flex justify-content-center align-items-center" >
+        <button type="button" class="btn btn-primary btn-rounded btn-card-overlay" data-toggle="modal" data-target="#quickViewModal" data-post-id="{{ $post_id }}" >Quick View</button>
+      </div>
+    @endif
   </div>
   <div class="card-body">
     <a href="{{ get_permalink($post_id) }}" title="{{ $product->get_title() }}" class="d-block h3 text-black mb-3" >{{ $product->get_title() }}</a>

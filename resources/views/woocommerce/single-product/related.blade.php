@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<section id="related" class="related products container">
     <div class="row mb-3">
       <div class="col">
-        <h2 class="section-title mb-0">You <span>May Also Like</span></h2>
+        <h2 class="section-title mb-0">Frequently Bought Together</h2>
       </div>
     </div>
     <div class="row">

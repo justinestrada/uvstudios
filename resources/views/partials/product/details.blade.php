@@ -26,7 +26,7 @@
       woocommerce_template_single_add_to_cart();
       @endphp
       <hr class="mb-3"/>
-      @include('partials.product.details.price')
+      {{-- @include('partials.product.details.price') --}}
       @include('partials.product.details.tags')
       @if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) )
         <span class="sku_wrapper">

@@ -5,7 +5,7 @@ $site_url = get_site_url();
 @if (is_page_template('views/template-home.blade.php') || is_page_template('views/template-about.blade.php'))
   @include('partials.footer.social')
 @endif
-<footer id="footer" class="py-5">
+<footer id="footer" class="py-5" style="box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.16),0 -2px 10px 0 rgba(0,0,0,0.12) !important;">
   <div class="container">
     <div class="row mb-5 mb-lg-3">
       <div class="col-6 col-lg-3 mb-3 mb-lg-0">
