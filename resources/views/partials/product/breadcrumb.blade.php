@@ -6,7 +6,15 @@ global $post;
   <div class="container">
     <div class="row">
       <div class="col-md mb-1 mb-md-0">
-        {!! woocommerce_breadcrumb() !!}
+        {{-- {!! woocommerce_breadcrumb() !!} --}}
+        <nav class="woocommerce-breadcrumb">
+          <a href="{{ home_url('/') }}">Home</a>
+          <span class="mr-1">»</span>
+          <a href="{{ get_site_url() }}/shop/">Shop</a>
+          {{-- <span class="mr-1">»</span>
+          <a href="/product-category/uncategorized/">Uncategorized</a> --}}
+          <span class="mr-1">»</span>{!! get_the_title() !!}
+        </nav>
       </div>
       <div class="col-md-auto text-md-right">
         <ul id="social-shares" class="p-0 m-0">
