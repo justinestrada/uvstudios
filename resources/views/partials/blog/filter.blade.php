@@ -1,3 +1,4 @@
+{{--
 @php
 $categories = get_categories();
 @endphp
@@ -12,3 +13,4 @@ $categories = get_categories();
     </div>
   </section>
 @endif
+ --}}
