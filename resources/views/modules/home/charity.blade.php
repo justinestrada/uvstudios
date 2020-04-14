@@ -17,7 +17,7 @@
           <img src="{{ $charity['image']['url'] }}" alt="{{ $charity['image']['alt'] }}" class="d-block w-100 mx-auto" style="max-width: 256px;"/>
         </div>
         <div class="col-lg-5 d-flex align-items-lg-end">
-          <img src="{{ $charity['image_2']['url'] }}" alt="{{ $charity['image_2']['alt'] }}" class="w-100"/>
+          <img src="{{ $charity['image_2']['url'] }}" alt="{{ $charity['image_2']['alt'] }}" class="w-100" style="max-width: 384px;"/>
         </div>
       @endif
     </div>

@@ -47,7 +47,7 @@ echo wc_get_stock_html( $product ); // WPCS: XSS ok.
 		do_action( 'woocommerce_after_add_to_cart_quantity' );
 		@endphp
 
-    <div id="sticky-add-to-cart" class="bg-white bg-lg-transparent py-1 z-depth-1">
+    <div id="sticky-add-to-cart" class="bg-white bg-lg-transparent py-1">
       <div class="container">
         <div class="row">
           <div class="col-auto d-lg-none d-flex align-items-center">
