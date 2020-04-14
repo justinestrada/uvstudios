@@ -1,3 +1,4 @@
+{{-- TODO: The review accordion toggle needs to be switched --}}
 @php
 $average = $product->get_average_rating();
 $rating_count = $product->get_rating_count();
@@ -31,7 +32,7 @@ $rating_count = $product->get_rating_count();
           </button>
         </h5>
       </div>
-      <div id="collapseOne" class="collapse show" aria-labelledby="reviewsOne" data-parent="#accordionWriteReview">
+      <div id="collapseOne" class="collapse" aria-labelledby="reviewsOne" data-parent="#accordionWriteReview">
         <div class="card-body px-0">
           @php comments_template(); @endphp
         </div>
@@ -48,7 +49,7 @@ $(document).ready(function() {
   * Reviews Pagination
   * */
 if ( $('#comments').length ) {
-    const postPerPage = 10;
+    const postPerPage = 5;
     const commentCount = $('.commentlist .review').length;
     // if commentCount greater than 10
     if ( commentCount > postPerPage ) {

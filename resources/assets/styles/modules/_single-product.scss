@@ -146,11 +146,12 @@
         left: 0;
         width: 100%;
         border-top: 1px solid $light-gray;
-        z-index: 2;
+        z-index: 15;
+        box-shadow: 0 -2px 5px 0 rgba(0, 0, 0, 0.16), 0 -2px 10px 0 rgba(0, 0, 0, 0.12);
       }
 
       @include media-breakpoint-up(lg) {
-        box-shadow: none !important;
+        box-shadow: none;
       }
     }
   }

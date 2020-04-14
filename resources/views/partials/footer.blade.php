@@ -7,7 +7,7 @@ $site_url = get_site_url();
 @endif
 <footer id="footer" class="py-5" style="box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.16),0 -2px 10px 0 rgba(0,0,0,0.12) !important;">
   <div class="container">
-    <div class="row mb-5 mb-lg-3">
+    <div class="row mb-5">
       <div class="col-6 col-lg-3 mb-3 mb-lg-0">
         <h4 class="text-uppercase tk-soleil mb-3">Shop</h4>
         @if ( has_nav_menu('footer_menu_1') )
@@ -69,9 +69,9 @@ $site_url = get_site_url();
         @include('partials.social-icons', ['color' => 'black'])
       </div>
     </div>
-    <div class="footer-copyright row py-3">
+    <div class="footer-copyright row">
       <div class="col-lg-6 mb-3 mb-lg-0">
-        <p class="text-center text-lg-left mb-0">
+        <p class="text-center text-lg-left mb-3">
           <i class="fa fa-cc-visa fs-1.25x mr-3"></i>
           <i class="fa fa-cc-amex fs-1.25x mr-3"></i>
           <i class="fa fa-cc-mastercard fs-1.25x mr-3"></i>

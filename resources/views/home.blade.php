@@ -5,11 +5,13 @@
     <div class="container mb-5">
       <div class="row">
         <div class="col">
-          <h2 class="text-uppercase">News</h2>
+          <h2 class="text-uppercase">{{ get_the_title( get_queried_object_id() ) }}</h2>
         </div>
+        <!--
         <div class="col text-center text-lg-right">
           <button type="button" class="btn btn-primary btn-rounded" title="Press Inquiries" data-toggle="modal" data-target="#pressModal" >Press Inquiries</button>
         </div>
+        -->
       </div>
     </div>
     @include('partials.blog.filter')

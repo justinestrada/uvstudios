@@ -26,7 +26,7 @@ global $product;
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	@endphp
 
-  <div id="sticky-add-to-cart" class="bg-white bg-lg-transparent py-1" style="box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.16),0 -2px 10px 0 rgba(0,0,0,0.12) !important;">
+  <div id="sticky-add-to-cart" class="bg-white bg-lg-transparent py-1">
     <div class="container">
       <div class="row">
         <div class="col-auto d-lg-none d-flex align-items-center">
