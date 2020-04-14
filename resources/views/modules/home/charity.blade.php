@@ -14,10 +14,10 @@
       </div>
       @if ($charity['image'])
         <div class="col-lg-3 mb-3 mb-lg-0 d-flex align-items-lg-end">
-          <img src="{{ $charity['image']['url'] }}" alt="{{ $charity['image']['alt'] }}" class="d-block w-100 mx-auto" style="max-width: 256px;"/>
+          <img src="{{ $charity['image']['url'] }}" alt="{{ $charity['image']['alt'] }}" class="d-block mx-auto" style="height: 256px;"/>
         </div>
         <div class="col-lg-5 d-flex align-items-lg-end">
-          <img src="{{ $charity['image_2']['url'] }}" alt="{{ $charity['image_2']['alt'] }}" class="w-100" style="max-width: 384px;"/>
+          <img src="{{ $charity['image_2']['url'] }}" alt="{{ $charity['image_2']['alt'] }}" class="d-block mx-auto" style="height: 256px;"/>
         </div>
       @endif
     </div>
