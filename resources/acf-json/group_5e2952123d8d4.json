@@ -623,6 +623,63 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_5e96298bcc480",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Your Purchase Supports",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e96286fcc47f",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Helping fund <a href=\"https:\/\/projectcure.org\/project-cure-response-covid-19\" target=\"_blank\" title=\"ProjectCURE\"><u>ProjectCURE<\/u><\/a> with medical supplies pallets needed for the pandemic we all face.",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5e962999cc481",
+                    "label": "Quote",
+                    "name": "quote",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "<i>\"Stay safe stay healthy,\" <br class=\"d-none d-lg-block\"\/> ~ UV Studios Team<\/i>",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_5e9044309f159",
                     "label": "Image",
                     "name": "image",
@@ -772,5 +829,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1586758753
+    "modified": 1586899390
 }

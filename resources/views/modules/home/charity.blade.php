@@ -4,15 +4,19 @@
     <div class="row">
       <div class="col-lg-4 text-center text-lg-left mb-3 mb-lg-0">
         <h2 class="text-uppercase fs-3.5x mb-3 mb-lg-5">Charity</h2>
-        <h4 class="fs-2.5x mb-3 mb-lg-5">Your Purchase Supports</h4>
-        <p class="fs-1.25x mb-3">Helping fund <a href="https://projectcure.org/project-cure-response-covid-19" target="_blank" title="ProjectCURE"><u>ProjectCURE</u></a> with medical supplies pallets needed for the pandemic we all face.</p>
-        <p class="mb-0"><i>"Stay safe stay healthy," <br class="d-none d-lg-block"/> ~ UV Studios Team</i></p>
+        <h4 class="fs-2.5x mb-3 mb-lg-5">
+          {!! $charity['subtitle'] !!}
+        </h4>
+        <div class="fs-1.25x mb-3">
+          {!! $charity['text'] !!}
+        </div>
+        <p class="mb-0">{!! $charity['quote'] !!}</p>
       </div>
       @if ($charity['image'])
-        <div class="col-lg-3 mb-3 mb-lg-0">
-          <img src="{{ $charity['image']['url'] }}" alt="{{ $charity['image']['alt'] }}" class="w-100"/>
+        <div class="col-lg-3 mb-3 mb-lg-0 d-flex align-items-lg-end">
+          <img src="{{ $charity['image']['url'] }}" alt="{{ $charity['image']['alt'] }}" class="d-block w-100 mx-auto" style="max-width: 256px;"/>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5 d-flex align-items-lg-end">
           <img src="{{ $charity['image_2']['url'] }}" alt="{{ $charity['image_2']['alt'] }}" class="w-100"/>
         </div>
       @endif
