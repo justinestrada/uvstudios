@@ -11,8 +11,8 @@
   .xoo-wsc-img-col img {
     width: 100% !important;
     height: auto !important;
+    border: 1px solid $gray;
 
-    @extend .z-depth-1;
     @extend .rounded;
   }
 
@@ -24,7 +24,7 @@
     }
 
     .xoo-wsc-qtybox {
-      border: 1px solid $black;
+      border: 1px solid $gray;
 
       @extend .btn-rounded;
 

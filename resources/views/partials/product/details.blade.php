@@ -24,9 +24,13 @@
       <hr class="mb-3"/>
       @include( 'partials.product.details.rating' )
       <div class="excerpt mb-3">{!! get_the_excerpt(get_the_ID()) !!} <a href="#content" title="Read More" class="d-block text-black smooth-scroll"><u>Read more...</u></a></div>
-      @php
-      woocommerce_template_single_add_to_cart();
-      @endphp
+      @if ($product->is_in_stock())
+        @php
+        woocommerce_template_single_add_to_cart();
+        @endphp
+      @else
+        <button class="btn btn-danger btn-rounded btn-card-overlay" style="cursor: default;">Sold Out</button>
+      @endif
       <hr class="mb-3"/>
       {{-- @include('partials.product.details.price') --}}
       @include('partials.product.details.tags')
