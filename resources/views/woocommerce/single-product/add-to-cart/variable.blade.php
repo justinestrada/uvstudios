@@ -26,7 +26,7 @@ $variations_attr = function_exists( 'wc_esc_json' ) ? wc_esc_json( $variations_j
 do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 
 
-<form class="variations_form cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. ?>">
+<form class="variations_form cart mb-3" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data' data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo $variations_attr; // WPCS: XSS ok. ?>">
 	<?php do_action( 'woocommerce_before_variations_form' ); ?>
 	<?php if ( empty( $available_variations ) && false !== $available_variations ) : ?>
 		<p class="stock out-of-stock badge badge-danger">
@@ -70,7 +70,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
         @endforeach
       </div>
     @endforeach
-    <div class="mb-3">
+    <div id="default-quantity-row" class="mb-3">
       <div class="btn-group btn-group-quantity btn-rounded w-100" role="group">
         <button type="button" class="btn btn-minus btn-outline-black" >
           -
@@ -81,6 +81,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
         </button>
       </div>
     </div>
+    @include('partials.product.details.discount-rules')
 		<div class="single_variation_wrap">
 			<?php
 				/**

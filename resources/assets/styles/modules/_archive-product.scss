@@ -1,4 +1,13 @@
 
+.woocommerce-ordering [name="orderby"] {
+  border: 1px solid $gray;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 8px;
+  width: 100%;
+  background: $white;
+}
+
 .product-card {
   .view {
     height: 256px;

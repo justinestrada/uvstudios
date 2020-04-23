@@ -24,7 +24,7 @@ export const Login = {
         const res = JSON.parse(response);
         if ( res.success ) {
           /* eslint-disable no-undef */
-          // location.href = THEME_VARS.site_url;
+          // location.href = Theme.site_url;
           location.reload();
         } else {
           console.error(res.msg);

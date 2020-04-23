@@ -1,14 +1,17 @@
 import { Smooth } from '../utils/smooth';
+import { Timer } from '../layouts/Timer';
+// import { Cookie } from '../utils/Cookie'; // TODO: use for countdown tracking
 
 export const Product = {
   onLoad: function() {
     if ( $('.single-product').length) {
       Smooth.onInit( $('.smooth-scroll') );
-      Product.initImageGallery();
-      Product.onInitAttributeLabel();
-      Product.onChangeQuantity();
-      Product.initReviewErrorNodes();
-      Product.onSubmitReview();
+      this.initImageGallery();
+      this.onInitAttributeLabel();
+      this.onChangeQuantity();
+      this.initScarcityTimer();
+      this.initReviewErrorNodes();
+      this.onSubmitReview();
     }
   },
   initImageGallery: function() {
@@ -55,6 +58,16 @@ export const Product = {
         }
       }
     });
+  },
+  initScarcityTimer: function() {
+    // TODO: Better conditional: if product has rules && scarcity timer activated
+    // TODO: Add ACF scarcity timer to setting
+    if ($('#timer').length) {
+      // TODO: Countdown needs to be X amount of time from when the user visits the website
+      // eslint-disable-next-line no-undef
+      console.log(Theme.timer);
+      Timer.init('April 24, 2020 00:00:00');
+    }
   },
   initReviewErrorNodes: function() {
     $('.comment-form-rating').append('<p class="comment-form-error text-danger" style="display: none;">Please select a rating.</p>');

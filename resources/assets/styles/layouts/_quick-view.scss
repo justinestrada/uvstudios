@@ -2,9 +2,14 @@
 #quickViewModal {
   .close[type="button"] {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 0;
+    top: 0;
     z-index: 1;
+    font-size: 1.5rem;
+
+    span {
+      font-size: 3rem;
+    }
   }
 
   .amount {

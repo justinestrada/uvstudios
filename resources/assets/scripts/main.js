@@ -6,7 +6,7 @@ import './autoload/**/*'
 
 import { Login } from './layouts/login';
 import { Register } from './layouts/register';
-// import { Announcement } from './layouts/announcement';
+// import { Announcement } from './layouts/Announcement';
 import { LeftStickyMenu } from './layouts/leftStickyMenu';
 import { CookiePolicy } from './layouts/CookiePolicy';
 import { QuickView } from './layouts/QuickView';

@@ -12,11 +12,11 @@
           </div>
         </div>
         <div class="row quick-view-row" style="display: none;" >
-          <div class="col-4 pl-0">
-            <img src="" alt="" class="quick-view-img img-fluid w-100"/>
+          <div class="col-lg-4 pl-lg-0">
+            <img src="" alt="" class="quick-view-img img-fluid w-100 rounded"/>
           </div>
-          <div class="col-8 d-flex align-items-center">
-            <div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <div class="px-3 pb-3 p-lg-0">
               <a href="#" class="quick-view-title h3 text-uppercase text-black"></a>
               <p>
                 <span class="woocommerce-Price-amount amount sale-price">
