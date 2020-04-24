@@ -7,28 +7,28 @@ $product_has_discount_rules = is_product(64);
   @php
   $quantity_discounts = [
     [
-      'label' => 'One Chloe<span class="d-none d-lg-inline-block"> $35</span>',
+      'label' => 'One Chloe<strong class="d-none d-lg-inline-block ml-1"> $35</strong>',
       'value' => 1,
       'savings' => '&nbsp;',
       'total_discount' => 0,
       'price' => 35,
     ],
     [
-      'label' => 'Two Chloes<span class="d-none d-lg-inline-block"> $60</span>',
+      'label' => 'Two Chloes<strong class="d-none d-lg-inline-block ml-1"> $60</strong>',
       'value' => 2,
       'savings' => 'Save $10',
       'total_discount' => 10,
       'price' => 60,
     ],
     [
-      'label' => 'Three Chloes<span class="d-none d-lg-inline-block"> $90</span>',
+      'label' => 'Three Chloes<strong class="d-none d-lg-inline-block ml-1"> $90</strong>',
       'value' => 3,
       'savings' => 'Save $15',
       'total_discount' => 15,
       'price' => 90,
     ],
     [
-      'label' => 'Four Chloes<span class="d-none d-lg-inline-block"> $120</span>', // 'Four Chloes $120',
+      'label' => 'Four Chloes<strong class="d-none d-lg-inline-block ml-1">$120</strong>', // 'Four Chloes $120',
       'value' => 4,
       'savings' => 'Save $20', 
       'total_discount' => 20,

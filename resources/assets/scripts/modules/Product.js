@@ -34,12 +34,16 @@ const QuantityDiscount = {
       const regular_price = selected_variation_name_price * quantity;
       const total_discount = parseInt($selected_quantity_discount.attr('total_discount'));
       const sale_price = regular_price - total_discount;
-      let html = '<span class="woocommerce-Price-amount amount sale-price text-green mr-2" >';
+      let html = '<span class="woocommerce-Price-amount amount sale-price '; 
+              html += (sale_price < regular_price) ? 'text-green ' : '';
+              html += 'mr-2" >';
               html += '<span class="woocommerce-Price-currencySymbol">$</span>' + sale_price;
           html += '</span>';
-          html += '<strike class="woocommerce-Price-amount amount regular-price" style="font-size: 1.25rem;" >';
-              html += '<span class="woocommerce-Price-currencySymbol">$</span>' + regular_price;
-          html += '</strike>';
+          if (sale_price < regular_price) {
+            html += '<strike class="woocommerce-Price-amount amount regular-price" style="font-size: 1.25rem;" >';
+                html += '<span class="woocommerce-Price-currencySymbol">$</span>' + regular_price;
+            html += '</strike>';
+          }
       $('#sticky-add-to-cart .price').html(html);
     }
   },

@@ -9,17 +9,17 @@
     color: $black;
     margin-right: 0.5rem;
 
-    small {
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+    // small {
+    //   font-weight: 700;
+    //   text-transform: uppercase;
+    // }
 
     span {
       display: block;
       color: $black;
       font-weight: 700;
       font-size: 2rem;
-      padding: 0.5rem 0;
+      padding: 0;
       width: 64px;
       border: 1px solid $gray;
       border-radius: 0.25rem;

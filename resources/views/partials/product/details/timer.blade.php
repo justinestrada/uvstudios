@@ -22,6 +22,6 @@ $timer = get_field('timer');
         <span id="seconds"></span>
       </li>
     </ul>
-    <p class="mb-0">{!! $timer['below_timer_text'] !!}</p>
+    <p class="text-danger mb-0">{!! $timer['below_timer_text'] !!}</p>
   </div>
 @endif
