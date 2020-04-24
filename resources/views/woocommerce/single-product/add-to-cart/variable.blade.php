@@ -58,11 +58,11 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
           <h6 class="mb-0">Select <strong class="text-capitalize ff-roboto">{{ wc_attribute_label( $attribute_name ) }}</strong></h6>
         </div>
       </div>
-      <div class="row">
+      <div class="row attributes">
         @foreach( $options['options'] as $key => $option )
           <div class="col-6 mb-3">
               <div class="form-group mb-0">
-                <label for="attribute_{{ esc_attr( sanitize_title( $attribute_name ) ) }}" class="attribute-label btn btn-outline-black" value="{{ $option }}">
+                <label name="attribute_{{ esc_attr( sanitize_title( $attribute_name ) ) }}" class="attribute-label btn btn-outline-black" value="{{ $option }}">
                   {{ $option }}
                 </label>
               </div>

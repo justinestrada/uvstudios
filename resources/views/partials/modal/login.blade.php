@@ -13,7 +13,7 @@
         <div class="mb-3">
           @include('partials.login.form')
         </div>
-        <p class="text-center text-uppercase mb-3">Or</p>
+        {{-- <p class="text-center text-uppercase mb-3">Or</p> --}}
         {{-- <a href="#register" class="btn btn-outline-black btn-rounded btn-block" data-dismiss="modal" aria-label="Close Login Open Register" data-toggle="modal" data-target="#registerModal" >Register Now</a> --}}
       </div>
     </div>

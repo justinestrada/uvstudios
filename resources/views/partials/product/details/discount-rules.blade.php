@@ -7,24 +7,32 @@ $product_has_discount_rules = is_product(64);
   @php
   $quantity_discounts = [
     [
-      'label' => 'One Chloe $35',
+      'label' => 'One Chloe<span class="d-none d-lg-inline-block"> $35</span>',
       'value' => 1,
       'savings' => '&nbsp;',
+      'total_discount' => 0,
+      'price' => 35,
     ],
     [
-      'label' => 'Two Chloes $60',
+      'label' => 'Two Chloes<span class="d-none d-lg-inline-block"> $60</span>',
       'value' => 2,
       'savings' => 'Save $10',
+      'total_discount' => 10,
+      'price' => 60,
     ],
     [
-      'label' => 'Three Chloes $90',
+      'label' => 'Three Chloes<span class="d-none d-lg-inline-block"> $90</span>',
       'value' => 3,
       'savings' => 'Save $15',
+      'total_discount' => 15,
+      'price' => 90,
     ],
     [
-      'label' => 'Three Chloes $120',
+      'label' => 'Four Chloes<span class="d-none d-lg-inline-block"> $120</span>', // 'Four Chloes $120',
       'value' => 4,
       'savings' => 'Save $20', 
+      'total_discount' => 20,
+      'price' => 120,
     ]
   ];
   @endphp
@@ -45,42 +53,17 @@ $product_has_discount_rules = is_product(64);
             <h6 class="mb-0">Select Quantity</h6>
         </div>
     </div>
-    <div class="row">
+    <div class="row attributes">
       @foreach($quantity_discounts as $key => $option)
         <div class="col-6 mb-3">
           <span class="d-block savings text-green text-center">{!! $option['savings'] !!}</span>
           <div class="form-group mb-0">
-            <label for="quantity_{{ $key + 1 }}" class="attribute-label btn btn-outline-black px-0" value="{{ $option['value'] }}">
-              {{ $option['label'] }}
+            <label name="quantity_discount" class="attribute-label btn btn-outline-black px-0 {{ $key === 0 ? 'selected' : '' }}" value="{{ $option['value'] }}" total_discount="{{ $option['total_discount'] }}" price="{{ $option['price'] }}">
+              {!! $option['label'] !!}
             </label>
           </div>
         </div>
       @endforeach
     </div>
   </section>
-  <script>
-  (function($) {
-  const QuantityDiscount = {
-    onLoad: function() {
-      if ($('#quantity-discount').length) {
-        // $('.woo_discount_rules_variant_table').hide(); // solved with css
-        // $('.btn-group-quantity').hide(); // solved with css
-        this.onLabelClick();
-      }
-    },
-    hideDefaultQuantity: function() {
-      $('.btn-group-quantity').hide();
-    },
-    onLabelClick: function() {
-      $('#quantity-discount .attribute-label').on('click', function() {
-        const quantity = $(this).attr('value');
-        $('[name="quantity"]').val(quantity);
-      });
-    },
-  };
-  $(document).ready(function() {
-    QuantityDiscount.onLoad();
-  });
-  })(jQuery);
-  </script>
 @endif

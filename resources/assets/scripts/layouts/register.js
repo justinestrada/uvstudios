@@ -5,7 +5,6 @@ export const Register = {
     }
   },
   onFormSubmit: function() {
-    console.log('Register.onFormSubmit');
     $('#register').on('submit', function(e) {
       e.preventDefault();
       $(this).find('[type="submit"]').prop('disabled', true);

@@ -35,7 +35,7 @@ global $product;
           </div>
         </div>
         <div class="col p-md-0">
-          <button type="submit" class="single_add_to_cart_button button alt w-100"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+          <button type="submit" class="single_add_to_cart_button button alt w-100">{!! esc_html( $product->single_add_to_cart_text() ) !!}</button>
         </div>
       </div>
     </div>

@@ -43,7 +43,9 @@ add_action('wp_enqueue_scripts', function () {
     );
 
     if (is_product()) {
-        $THEME['timer'] = get_field('timer', get_the_ID());
+        $post_id = get_the_ID();
+        $THEME['product_id'] = $post_id;
+        $THEME['timer'] = get_field('timer', $post_id);
     }
     
     wp_localize_script('sage/main.js', 'Theme', $THEME);
