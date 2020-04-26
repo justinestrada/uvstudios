@@ -128,8 +128,10 @@ export const Product = {
         endDate = new Date(cookie_value);
         // Cookie date is less than Today
         if (endDate < new Date()) {
+          Cookie.erase(cookie_name);
           // then reset timer to stored duration
           endDate = this.getDefaultEndDate(today);
+          Cookie.create(cookie_name, endDate, 7);
         }
       } else {
         endDate = this.getDefaultEndDate(today);
