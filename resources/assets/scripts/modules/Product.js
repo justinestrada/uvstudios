@@ -91,7 +91,7 @@ export const Product = {
       select.val(value).trigger( 'change' );
       setTimeout(function() {
         QuantityDiscount.updatePriceShown();
-      }, 500);
+      }, 250);
     });
   },
   onChangeQuantity: function() {

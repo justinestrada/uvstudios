@@ -1,69 +1,77 @@
 
 @php
-// TODO: if product has rules
-$product_has_discount_rules = is_product(64);
+$discount_rules = get_field('discount_rules');
 @endphp
-@if (class_exists('FlycartWooDiscountRulesCartRules') && $product_has_discount_rules)
-  @php
-  $quantity_discounts = [
-    [
-      'label' => 'One Chloe<strong class="d-none d-lg-inline-block ml-1"> $35</strong>',
-      'value' => 1,
-      'savings' => '&nbsp;',
-      'total_discount' => 0,
-      'price' => 35,
-    ],
-    [
-      'label' => 'Two Chloes<strong class="d-none d-lg-inline-block ml-1"> $60</strong>',
-      'value' => 2,
-      'savings' => 'Save $10',
-      'total_discount' => 10,
-      'price' => 60,
-    ],
-    [
-      'label' => 'Three Chloes<strong class="d-none d-lg-inline-block ml-1"> $90</strong>',
-      'value' => 3,
-      'savings' => 'Save $15',
-      'total_discount' => 15,
-      'price' => 90,
-    ],
-    [
-      'label' => 'Four Chloes<strong class="d-none d-lg-inline-block ml-1">$120</strong>', // 'Four Chloes $120',
-      'value' => 4,
-      'savings' => 'Save $20', 
-      'total_discount' => 20,
-      'price' => 120,
-    ]
-  ];
-  @endphp
-  <style>
-  .woo_discount_rules_variant_table,
-  #default-quantity-row {
-    display: none;
-  }
-  .savings {
-    color: #007e32;
-    font-size: 0.875rem;
-    font-weight: bold;
-  }
-  </style>
-  <section id="quantity-discount">
-    <div class="row">
-        <div class="col">
-            <h6 class="mb-0">Select Quantity</h6>
+@if ($discount_rules && class_exists('FlycartWooDiscountRulesCartRules'))
+  @if ($discount_rules['enable'])
+    @php
+    /*
+    $quantity_discounts = [
+      [
+        'label' => 'One Chloe<strong class="d-none d-lg-inline-block ml-1"> $35</strong>',
+        'value' => 1,
+        'savings' => '&nbsp;',
+        'total_discount' => 0,
+        'price' => 35,
+      ],
+      [
+        'label' => 'Two Chloes<strong class="d-none d-lg-inline-block ml-1"> $60</strong>',
+        'value' => 2,
+        'savings' => 'Save $10',
+        'total_discount' => 10,
+        'price' => 60,
+      ],
+      [
+        'label' => 'Three Chloes<strong class="d-none d-lg-inline-block ml-1"> $90</strong>',
+        'value' => 3,
+        'savings' => 'Save $15',
+        'total_discount' => 15,
+        'price' => 90,
+      ],
+      [
+        'label' => 'Four Chloes<strong class="d-none d-lg-inline-block ml-1">$120</strong>', // 'Four Chloes $120',
+        'value' => 4,
+        'savings' => 'Save $20', 
+        'total_discount' => 20,
+        'price' => 120,
+      ]
+    ];*/
+    @endphp
+    @if ($rules = $discount_rules['rules'])
+      <style>
+      .woo_discount_rules_variant_table,
+      #default-quantity-row {
+        display: none;
+      }
+      .savings {
+        color: #007e32;
+        font-size: 0.875rem;
+        font-weight: bold;
+      }
+      </style>
+      <section id="quantity-discount">
+        <div class="row">
+            <div class="col">
+                <h6 class="mb-0">Select Quantity</h6>
+            </div>
         </div>
-    </div>
-    <div class="row attributes">
-      @foreach($quantity_discounts as $key => $option)
-        <div class="col-6 mb-3">
-          <span class="d-block savings text-green text-center">{!! $option['savings'] !!}</span>
-          <div class="form-group mb-0">
-            <label name="quantity_discount" class="attribute-label btn btn-outline-black px-0 {{ $key === 0 ? 'selected' : '' }}" value="{{ $option['value'] }}" total_discount="{{ $option['total_discount'] }}" price="{{ $option['price'] }}">
-              {!! $option['label'] !!}
-            </label>
-          </div>
+        <div class="row attributes">
+          @foreach($rules as $key => $option)
+            <div class="col-6 mb-3">
+              <span class="d-block savings text-green text-center">{!! $option['savings'] !!}</span>
+              <div class="form-group mb-0">
+                <label name="quantity_discount" class="attribute-label btn btn-outline-black px-0 {{ $key === 0 ? 'selected' : '' }}" value="{{ $option['value'] }}" total_discount="{{ $option['total_discount'] }}" price="{{ $option['price'] }}">
+                  {!! $option['label'] !!}
+                </label>
+              </div>
+            </div>
+          @endforeach
         </div>
-      @endforeach
-    </div>
-  </section>
+      </section>
+    @else
+      <div class="alert alert-info">
+        <p class="text-info mb-0">Discount Rules missing</p>
+      </div>
+    @endif
+  @endif
 @endif
