@@ -1,9 +1,9 @@
-import { Countdown } from '../layouts/countdown';
+import { Timer } from '../layouts/Timer';
 
 export const Splash = {
   onLoad: function() {
     if ($('.template-splash').length) {
-      Countdown.init();
+      Timer.init();
     }
   },
 };

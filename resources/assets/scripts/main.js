@@ -4,9 +4,9 @@ import 'jquery';
 // Import everything from autoload
 import './autoload/**/*'
 
-import { Login } from './layouts/login';
-import { Register } from './layouts/register';
-// import { Announcement } from './layouts/announcement';
+import { Login } from './layouts/Login';
+// import { Register } from './layouts/Register';
+// import { Announcement } from './layouts/Announcement';
 import { LeftStickyMenu } from './layouts/leftStickyMenu';
 import { CookiePolicy } from './layouts/CookiePolicy';
 import { QuickView } from './layouts/QuickView';
@@ -20,7 +20,7 @@ jQuery(document).ready(() => {
 	$(document).ready(function() {
     // layouts
 		Login.onLoad();
-		Register.onLoad();
+		// Register.onLoad();
 		// Announcement.onLoad();
     LeftStickyMenu.onLoad();
     CookiePolicy.onLoad();

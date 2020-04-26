@@ -32,7 +32,7 @@ if ( post_password_required() ) {
 }
 @endphp
 @include('partials.product.breadcrumb')
-<article id="product-{{ the_ID() }}" @php wc_product_class( 'py-5', $product ); @endphp>
+<article id="product-{{ the_ID() }}" @php wc_product_class( 'py-3 py-lg-5', $product ); @endphp>
 	@include('partials.product.details')
 	{{-- @include('partials.product.certs') --}}
 	{{-- @include('partials.product.sticky-add-to-cart') --}}

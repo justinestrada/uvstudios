@@ -47,7 +47,7 @@ export const QuickView = {
       $.ajax({
         method: 'GET',
         // eslint-disable-next-line no-undef
-        url: THEME_VARS.rest_url + '/product/' + post_id,
+        url: Theme.rest_url + '/product/' + post_id,
       }).done(function(res) {
         resolve(res);
       }).fail(function(err) {

@@ -15,7 +15,7 @@
     @include('partials.footer')
     {{-- @include('partials.toast.cookie-policy') --}}
     @if ( ! is_user_logged_in() )
-      @include('partials.modal.register')
+      {{-- @include('partials.modal.register') --}}
       @include('partials.modal.login')
     @endif
     @php wp_footer() @endphp

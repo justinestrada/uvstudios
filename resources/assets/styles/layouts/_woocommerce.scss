@@ -22,10 +22,10 @@
   margin-left: auto !important;
   margin-bottom: 0 !important;
   text-transform: uppercase !important;
+  color: #000;
 
   @extend .container;
   @extend .container-big;
-  @extend .text-black;
   @extend .font-weight-bold;
 
   a {

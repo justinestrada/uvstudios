@@ -9,7 +9,8 @@
     <h2 class="fs-3.5x mb-0">{!! get_the_title() !!}</h2>
   </div>
   <div class="col-auto d-flex align-items-center">
-    @if ( $product->is_on_sale() )
+    {{-- {{ $product->is_on_sale() }}
+    @if ($product->is_on_sale())
       <span class="woocommerce-Price-amount amount sale-price mr-2" >
         <span class="woocommerce-Price-currencySymbol">{!! get_woocommerce_currency_symbol() !!}</span>
         {!! str_replace('.00', '', $product->get_sale_price()) !!}
@@ -18,11 +19,11 @@
         <span class="woocommerce-Price-currencySymbol">{!! get_woocommerce_currency_symbol() !!}</span>
         {!! str_replace('.00', '', $product->get_regular_price()) !!}
       </strike>
-    @else
+    @else --}}
       <span class="woocommerce-Price-amount amount sale-price" >
         <span class="woocommerce-Price-currencySymbol">{!! get_woocommerce_currency_symbol() !!}</span>
         {!! str_replace('.00', '', $product->get_price()) !!}
       </span>
-    @endif
+    {{-- @endif --}}
   </div>
 </div>

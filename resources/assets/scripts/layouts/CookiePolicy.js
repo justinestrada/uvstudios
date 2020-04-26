@@ -3,9 +3,7 @@ import { Cookie } from '../utils/Cookie';
 
 export const CookiePolicy = {
   onLoad: function() {
-    console.log('CookiePolicy');
     if ( !Cookie.read('HIDE_TOAST_COOKIE_POLICY') && !$('.template-splash').length ) {
-      console.log('CookiePolicy this.onShow');
       this.onShow();
       this.onClose();
     }

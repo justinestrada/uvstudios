@@ -5,7 +5,6 @@ export const Register = {
     }
   },
   onFormSubmit: function() {
-    console.log('Register.onFormSubmit');
     $('#register').on('submit', function(e) {
       e.preventDefault();
       $(this).find('[type="submit"]').prop('disabled', true);
@@ -23,7 +22,7 @@ export const Register = {
         const res = JSON.parse(response);
         if ( res.success ) {
           /* eslint-disable no-undef */
-          location.href = THEME_VARS.site_url + '/my-account';
+          location.href = Theme.site_url + '/my-account';
         } else {
           console.error(res.msg);
           $('#register .alert-danger .text-danger').text(res.msg).show();
