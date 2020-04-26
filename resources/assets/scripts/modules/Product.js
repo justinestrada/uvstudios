@@ -122,13 +122,17 @@ export const Product = {
     if ($('#timer').length) {
       const cookie_name = 'TIMER_END_DATE_' + Theme.product_id;
       const cookie_value = Cookie.read(cookie_name);
-      let endDate = new Date();
+      const today = new Date();
+      let endDate = null;
       if ( cookie_value !== null && cookie_value !== '' ) {
         endDate = new Date(cookie_value);
+        // Cookie date is less than Today
+        if (endDate < new Date()) {
+          // then reset timer to stored duration
+          endDate = this.getDefaultEndDate(today);
+        }
       } else {
-        endDate.setDate(endDate.getDate() + parseInt(Theme.timer.duration.days));
-        endDate.setHours(endDate.getHours() + parseInt(Theme.timer.duration.hours));
-        endDate.setMinutes(endDate.getMinutes() + parseInt(Theme.timer.duration.minutes));
+        endDate = this.getDefaultEndDate(today);
         // Create timer end date cookie
         Cookie.create(cookie_name, endDate, 7);
       }
@@ -137,11 +141,17 @@ export const Product = {
         if ($('#timer #days').text() === '00') {
           $('#timer #days').parent().hide();
         }
-        if ($('#timer #hours').text() === '00') {
-          $('#timer #hours').parent().hide();
-        }
+        // if ($('#timer #hours').text() === '00') {
+        //   $('#timer #hours').parent().hide();
+        // }
       }, 1000);
     }
+  },
+  getDefaultEndDate: function(endDate) {
+    endDate.setDate(endDate.getDate() + parseInt(Theme.timer.duration.days));
+    endDate.setHours(endDate.getHours() + parseInt(Theme.timer.duration.hours));
+    endDate.setMinutes(endDate.getMinutes() + parseInt(Theme.timer.duration.minutes));
+    return endDate;
   },
   initReviewErrorNodes: function() {
     $('.comment-form-rating').append('<p class="comment-form-error text-danger" style="display: none;">Please select a rating.</p>');

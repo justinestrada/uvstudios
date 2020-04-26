@@ -2,6 +2,10 @@
 export const Timer = {
   // dateString = 'April 13, 2020 00:00:00'
   init: function( dateString ) {
+    if (!dateString) {
+      console.error('Timer.js something went wrong.');
+      return false;
+    }
     const second = 1000,
           minute = second * 60,
           hour = minute * 60,
