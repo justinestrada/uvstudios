@@ -3,10 +3,10 @@
 /**
  * ACF - Only Admins & Super Admins can access ACF
  */
-// add_filter('acf/settings/show_admin', function ( $show ) {
-//     return false;
-    // return current_user_can('manage_options');
-// });
+add_filter('acf/settings/show_admin', function ( $show ) {
+    return false;
+    return current_user_can('manage_options');
+});
 
 /**
  * ACF Options Page
