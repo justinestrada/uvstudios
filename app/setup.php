@@ -7,7 +7,7 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
-define('THEME_VERSION', '0.3.3');
+define('THEME_VERSION', '0.4.0');
 
 /**
  * Theme assets
@@ -47,7 +47,7 @@ add_action('wp_enqueue_scripts', function () {
         $THEME['product_id'] = $post_id;
         $THEME['timer'] = get_field('timer', $post_id);
     }
-    
+
     wp_localize_script('sage/main.js', 'Theme', $THEME);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
