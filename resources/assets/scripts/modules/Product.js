@@ -32,9 +32,10 @@ const QuantityDiscount = {
       })
       const quantity = parseInt($('.variations_form [name="quantity"]').val());
       const regular_price = selected_variation_name_price * quantity;
-      const total_discount = parseInt($selected_quantity_discount.attr('total_discount'));
-      const sale_price = regular_price - total_discount;
-      let html = '<span class="woocommerce-Price-amount amount sale-price '; 
+      // const total_discount = parseInt($selected_quantity_discount.attr('total_discount'));
+      // const sale_price = regular_price - total_discount;
+      const sale_price = parseInt($selected_quantity_discount.attr('sale_price'));
+      let html = '<span class="woocommerce-Price-amount amount sale-price ';
               html += (sale_price < regular_price) ? 'text-green ' : '';
               html += 'mr-2" >';
               html += '<span class="woocommerce-Price-currencySymbol">$</span>' + sale_price;

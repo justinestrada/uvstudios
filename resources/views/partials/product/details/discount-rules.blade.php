@@ -4,39 +4,6 @@ $discount_rules = get_field('discount_rules');
 @endphp
 @if ($discount_rules && class_exists('FlycartWooDiscountRulesCartRules'))
   @if ($discount_rules['enable'])
-    @php
-    /*
-    $quantity_discounts = [
-      [
-        'label' => 'One Chloe<strong class="d-none d-lg-inline-block ml-1"> $35</strong>',
-        'value' => 1,
-        'savings' => '&nbsp;',
-        'total_discount' => 0,
-        'price' => 35,
-      ],
-      [
-        'label' => 'Two Chloes<strong class="d-none d-lg-inline-block ml-1"> $60</strong>',
-        'value' => 2,
-        'savings' => 'Save $10',
-        'total_discount' => 10,
-        'price' => 60,
-      ],
-      [
-        'label' => 'Three Chloes<strong class="d-none d-lg-inline-block ml-1"> $90</strong>',
-        'value' => 3,
-        'savings' => 'Save $15',
-        'total_discount' => 15,
-        'price' => 90,
-      ],
-      [
-        'label' => 'Four Chloes<strong class="d-none d-lg-inline-block ml-1">$120</strong>', // 'Four Chloes $120',
-        'value' => 4,
-        'savings' => 'Save $20', 
-        'total_discount' => 20,
-        'price' => 120,
-      ]
-    ];*/
-    @endphp
     @if ($rules = $discount_rules['rules'])
       <style>
       .woo_discount_rules_variant_table,
@@ -60,7 +27,7 @@ $discount_rules = get_field('discount_rules');
             <div class="col-6 mb-3">
               <span class="d-block savings text-green text-center">{!! $option['savings'] !!}</span>
               <div class="form-group mb-0">
-                <label name="quantity_discount" class="attribute-label btn btn-outline-black px-0 {{ $key === 0 ? 'selected' : '' }}" value="{{ $option['value'] }}" total_discount="{{ $option['total_discount'] }}" price="{{ $option['price'] }}">
+                <label name="quantity_discount" class="attribute-label btn btn-outline-black px-0 {{ $key === 0 ? 'selected' : '' }}" value="{{ $option['value'] }}" total_discount="{{ $option['total_discount'] }}" price="{{ $option['price'] }}" sale_price="{{ $option['sale_price'] }}">
                   {!! $option['label'] !!}
                 </label>
               </div>

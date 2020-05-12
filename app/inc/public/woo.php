@@ -30,4 +30,4 @@ add_filter( 'woocommerce_product_get_rating_html', function ( $rating_html, $rat
  */
 add_filter( 'woocommerce_product_single_add_to_cart_text', function () {
     return __( 'Add to Cart', 'woocommerce' ); 
-}); 
+});
